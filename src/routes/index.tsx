@@ -39,8 +39,16 @@ function Home() {
           />
           <div
             className="pointer-events-none absolute inset-0"
+            style={{
+              background:
+                "radial-gradient(ellipse 55% 65% at 78% 42%, rgba(40,48,44,0.42), transparent 70%)",
+            }}
+          />
+          <div
+            className="pointer-events-none absolute inset-0"
             style={{ background: "var(--gradient-veil)" }}
           />
+
           <div className="absolute inset-0 flex items-center">
             <div className="mx-auto w-full max-w-6xl px-6">
               <div className="rise-in ml-auto max-w-xl text-center md:text-right">
