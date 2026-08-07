@@ -246,3 +246,14 @@
 @utility rise-in {
   animation: rise 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
+
+/* Stronger all-round feathering for portrait photos */
+@utility feather-soft {
+  --feather-mask:
+    linear-gradient(to right, transparent 0%, #000 18%, #000 82%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, #000 14%, #000 84%, transparent 100%);
+  -webkit-mask-image: var(--feather-mask);
+  mask-image: var(--feather-mask);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}

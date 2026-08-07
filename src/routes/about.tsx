@@ -55,7 +55,7 @@ function About() {
           <img
             src={doors.url}
             alt="Maggie sitting cross-legged in front of an ornately carved Nepalese temple door"
-            className="feather-edges h-auto w-full object-cover"
+            className="feather-soft h-auto w-full object-cover"
             loading="lazy"
           />
         </figure>
