@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Wash } from "@/components/Wash";
+import doors from "@/assets/about-doors.jpg.asset.json";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -34,6 +36,7 @@ const paragraphs = [
 function About() {
   return (
     <div className="page-wash min-h-screen">
+      <Wash tone="pink-purple" />
       <div className="watermark-layer" aria-hidden />
       <Header />
 
@@ -48,8 +51,14 @@ function About() {
           </div>
         </header>
 
-        {/* Portrait placeholder — feathered container ready for Phase 2 photo */}
-        <div className="mx-auto mt-14 h-56 w-56 feather-edges rounded-full bg-[radial-gradient(circle_at_35%_30%,color-mix(in_oklab,var(--sand)_85%,transparent),color-mix(in_oklab,var(--gold)_25%,transparent))]" />
+        <figure className="mx-auto mt-14 max-w-md">
+          <img
+            src={doors.url}
+            alt="Maggie sitting cross-legged in front of an ornately carved Nepalese temple door"
+            className="feather-soft h-auto w-full object-cover"
+            loading="lazy"
+          />
+        </figure>
 
         <div className="mt-16 space-y-8 text-center text-base leading-[2] text-muted-foreground md:text-lg">
           {paragraphs.map((p) => (

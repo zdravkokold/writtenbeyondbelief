@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
+import { Wash } from "./Wash";
 
 export function PageShell({
   title,
@@ -13,6 +14,7 @@ export function PageShell({
 }) {
   return (
     <div className="page-wash min-h-screen">
+      <Wash tone="yellow" />
       <div className="watermark-layer" aria-hidden />
       <Header />
       <main className="mx-auto max-w-3xl px-6 pt-16 pb-8 md:pt-24">

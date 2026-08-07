@@ -246,3 +246,9 @@
 @utility rise-in {
   animation: rise 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
+
+/* Stronger all-round feathering for portrait photos */
+@utility feather-soft {
+  -webkit-mask-image: radial-gradient(ellipse 72% 70% at 50% 50%, #000 40%, rgba(0,0,0,0.55) 70%, transparent 96%);
+  mask-image: radial-gradient(ellipse 72% 70% at 50% 50%, #000 40%, rgba(0,0,0,0.55) 70%, transparent 96%);
+}
