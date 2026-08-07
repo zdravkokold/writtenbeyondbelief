@@ -17,7 +17,8 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
       className={
         overlay
           ? "absolute inset-x-0 top-0 z-30"
-          : "relative z-30 border-b border-border/60"
+          : "relative z-30"
+
       }
     >
       <div className="relative mx-auto max-w-6xl px-6 py-6 md:py-8">
