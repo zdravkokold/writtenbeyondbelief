@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import hero from "@/assets/hero.jpg.asset.json";
+import { Wash } from "@/components/Wash";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -26,6 +27,7 @@ export const Route = createFileRoute("/")({
 function Home() {
   return (
     <div className="page-wash min-h-screen">
+      <Wash tone="yellow-white" />
       <div className="watermark-layer" aria-hidden />
       <Header overlay />
 
@@ -51,13 +53,13 @@ function Home() {
 
           <div className="absolute inset-0 flex items-center">
             <div className="mx-auto w-full max-w-6xl px-6">
-              <div className="rise-in ml-auto max-w-xl text-center md:text-right">
+              <div className="rise-in mx-auto max-w-xl text-center md:mr-[6%] md:ml-auto">
                 <h1 className="font-display text-3xl leading-snug text-white drop-shadow-[0_2px_18px_rgba(0,0,0,0.45)] md:text-[2.6rem]">
                   Have you ever wondered what holds you back from creating from the
                   wisdom within you?
                 </h1>
 
-                <div className="my-8 flex items-center justify-center gap-4 md:justify-end">
+                <div className="my-8 flex items-center justify-center gap-4">
                   <span className="hairline w-20 md:w-24" />
                   <span className="text-[var(--gold)]">♥</span>
                   <span className="hairline w-20 md:w-24" />
@@ -71,7 +73,7 @@ function Home() {
                   beyond existing beliefs.
                 </p>
 
-                <div className="mt-10 flex justify-center md:justify-end">
+                <div className="mt-10 flex justify-center">
                   <Link
                     to="/work"
                     className="inline-flex items-center justify-center rounded-sm bg-primary/90 px-10 py-4 text-xs tracking-[0.22em] text-primary-foreground uppercase backdrop-blur-sm transition-colors hover:bg-primary"
