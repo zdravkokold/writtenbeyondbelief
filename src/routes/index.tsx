@@ -29,11 +29,11 @@ function Home() {
     <div className="page-wash min-h-screen">
       <Wash tone="yellow-white" />
       <div className="watermark-layer" aria-hidden />
-      <Header overlay />
+      <Header />
 
       {/* Hero */}
       <section className="relative">
-        <div className="relative h-[78vh] min-h-[560px] w-full overflow-hidden">
+        <div className="relative h-[68vh] max-h-[720px] min-h-[480px] w-full overflow-hidden">
           <img
             src={hero.url}
             alt="A woman standing on a clifftop above the sea with her arms open to the sky"
@@ -43,7 +43,7 @@ function Home() {
             className="pointer-events-none absolute inset-0"
             style={{
               background:
-                "radial-gradient(ellipse 55% 65% at 78% 42%, rgba(40,48,44,0.42), transparent 70%)",
+                "radial-gradient(ellipse 48% 58% at 76% 50%, rgba(40,48,44,0.40), transparent 72%)",
             }}
           />
           <div
@@ -53,8 +53,9 @@ function Home() {
 
           <div className="absolute inset-0 flex items-center">
             <div className="mx-auto w-full max-w-6xl px-6">
-              <div className="rise-in mx-auto max-w-xl text-center md:mr-[6%] md:ml-auto">
-                <h1 className="font-display text-3xl leading-snug text-white drop-shadow-[0_2px_18px_rgba(0,0,0,0.45)] md:text-[2.6rem]">
+              <div className="rise-in mx-auto max-w-lg text-center md:mr-[5%] md:ml-auto">
+                <h1 className="font-display text-[1.75rem] leading-snug text-white drop-shadow-[0_2px_18px_rgba(0,0,0,0.45)] md:text-[2.35rem]">
+
                   Have you ever wondered what holds you back from creating from the
                   wisdom within you?
                 </h1>
