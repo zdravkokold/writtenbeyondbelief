@@ -43,7 +43,7 @@ function Home() {
             className="pointer-events-none absolute inset-0"
             style={{
               background:
-                "radial-gradient(ellipse 46% 56% at 74% 52%, rgba(40,48,44,0.34), transparent 74%)",
+                "radial-gradient(ellipse 46% 60% at 74% 44%, rgba(38,46,42,0.46), transparent 76%)",
             }}
           />
           <div
