@@ -9,13 +9,7 @@ const links = [
   { to: "/contact", label: "Contact" },
 ] as const;
 
-export function Header({
-  overlay = false,
-  showLogo = true,
-}: {
-  overlay?: boolean;
-  showLogo?: boolean;
-}) {
+export function Header({ overlay = false }: { overlay?: boolean }) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -30,16 +24,15 @@ export function Header({
       <div className="relative mx-auto max-w-6xl px-6 py-6 md:py-8">
         <div className="flex flex-col items-center gap-4">
           <Link to="/" className="flex min-w-0 flex-col items-center gap-2">
-            {showLogo && <Logo className="h-14 w-14 shrink-0 md:h-16 md:w-16" />}
+            <Logo className="h-14 w-14 shrink-0 md:h-16 md:w-16" />
             <span
-              className={`font-display truncate text-2xl tracking-wide md:text-4xl ${
+              className={`font-display truncate text-xl tracking-wide md:text-3xl ${
                 overlay ? "text-white drop-shadow-md" : "text-foreground"
               }`}
             >
               writtenbeyondbelief.com
             </span>
           </Link>
-
 
           <nav className="hidden items-center justify-center gap-12 md:flex">
             {links.map((l) => (

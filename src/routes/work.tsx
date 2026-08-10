@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Wash } from "@/components/Wash";
 
 export const Route = createFileRoute("/work")({
   head: () => ({
@@ -49,7 +48,6 @@ const experience = [
 function Work() {
   return (
     <div className="page-wash min-h-screen">
-      <Wash tone="yellow" />
       <div className="watermark-layer" aria-hidden />
       <Header />
 

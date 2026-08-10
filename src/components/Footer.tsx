@@ -33,6 +33,9 @@ export function Footer() {
           Maggie@writtenbeyondbelief.com
         </a>
 
+        <p className="text-xs tracking-[0.2em] text-muted-foreground uppercase">
+          Written Beyond Belief · Explore · Expand · Create
+        </p>
         <p className="text-xs text-muted-foreground">
           © {new Date().getFullYear()} Written Beyond Belief. All rights reserved.
         </p>
