@@ -35,8 +35,8 @@
   --color-sage: var(--sage);
   --color-sand: var(--sand);
   --color-linen: var(--linen);
-  --font-display: "Cormorant Garamond", Georgia, serif;
-  --font-sans: "Karla", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Didot", "Didot LT STD", "Bodoni MT", "GFS Didot", "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Didot", "Didot LT STD", "Bodoni MT", "GFS Didot", "Cormorant Garamond", Georgia, serif;
 }
 
 :root {
