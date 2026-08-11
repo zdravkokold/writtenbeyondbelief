@@ -95,7 +95,44 @@ function Privacy() {
         Your information may be processed by trusted service providers who help us
         operate our website and Google Analytics. These providers process personal
         information in accordance with their own privacy policies and applicable data
-        protection law.
+        protection laws.
+      </p>
+
+      <h3>Data Retention</h3>
+      <p>
+        We keep personal information only for as long as necessary to respond to
+        enquiries, provide our services, meet legal obligations or resolve disputes.
+      </p>
+
+      <h3>Your Rights</h3>
+      <p>Under UK data protection law, you have the right to:</p>
+      <ul>
+        <li>Request access to your personal information.</li>
+        <li>Request correction of inaccurate information.</li>
+        <li>Request deletion of your personal information where appropriate.</li>
+        <li>Restrict or object to certain types of processing.</li>
+        <li>
+          Withdraw your consent at any time where processing is based on consent.
+        </li>
+        <li>Request a copy of the personal information you have provided to us.</li>
+      </ul>
+      <p>
+        To exercise any of these rights, please contact{" "}
+        <a href="mailto:Maggie@writtenbeyondbelief.com" className="text-primary">
+          Maggie@writtenbeyondbelief.com
+        </a>
+        .
+      </p>
+      <p>
+        If you believe your personal information has not been handled correctly, you
+        have the right to complain to the UK Information Commissioner's Office (ICO).
+      </p>
+
+      <h3>Security</h3>
+      <p>
+        We take appropriate technical and organisational measures to protect your
+        personal information against unauthorised access, disclosure, alteration or
+        destruction.
       </p>
 
       <h3>Changes to This Privacy Policy</h3>
@@ -105,10 +142,12 @@ function Privacy() {
       </p>
 
       <h2>Cookie Policy</h2>
+      <p className="text-sm text-muted-foreground">Last updated: 28 July 2026</p>
       <p>
         This website uses cookies to ensure it functions correctly and to improve your
         browsing experience.
       </p>
+
 
       <h3>What Are Cookies?</h3>
       <p>
