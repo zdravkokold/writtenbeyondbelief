@@ -89,6 +89,10 @@ function Terms() {
         services. Appointments are confirmed only after communication between you and
         Written Beyond Belief.
       </p>
+      <p>
+        Payment arrangements, cancellation terms and any additional information relating
+        to appointments will be provided separately where applicable.
+      </p>
 
       <h3>7. Links to Other Websites</h3>
       <p>
