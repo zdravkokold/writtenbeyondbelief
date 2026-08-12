@@ -5,6 +5,7 @@ import { toast } from "sonner";
 import { useForm, ValidationError } from "@formspree/react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Wash } from "@/components/Wash";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -61,6 +62,7 @@ function Contact() {
   if (state.succeeded) {
     return (
       <div className="page-wash min-h-screen">
+        <Wash tone="yellow" />
         <div className="watermark-layer" aria-hidden />
         <Header />
 
@@ -86,6 +88,7 @@ function Contact() {
 
   return (
     <div className="page-wash min-h-screen">
+      <Wash tone="yellow" />
       <div className="watermark-layer" aria-hidden />
       <Header />
 
