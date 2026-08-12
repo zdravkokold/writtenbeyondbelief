@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import hero from "@/assets/hero.jpg.asset.json";
+import hero from "@/assets/hero.jpg";
 import { Wash } from "@/components/Wash";
 import { Glyph, GlyphVeil } from "@/components/Glyph";
 
@@ -38,7 +38,7 @@ function Home() {
       <section className="relative">
         <div className="relative h-[68vh] max-h-[720px] min-h-[480px] w-full overflow-hidden">
           <img
-            src={hero.url}
+            src={hero}
             alt="A woman standing on a clifftop above the sea with her arms open to the sky"
             className="feather-bottom h-full w-full object-cover object-center"
           />

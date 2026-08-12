@@ -1,15 +1,15 @@
-import northStar from "@/assets/North_star.png.asset.json";
-import seedOfLife from "@/assets/seed_of_life.png.asset.json";
-import lotusBud from "@/assets/lotus_bud.png.asset.json";
-import lotus from "@/assets/lotus.png.asset.json";
-import mandala from "@/assets/Mandala.png.asset.json";
+import northStar from "@/assets/North star.png";
+import seedOfLife from "@/assets/seed of life.png";
+import lotusBud from "@/assets/lotus bud.png";
+import lotus from "@/assets/lotus.png";
+import mandala from "@/assets/Mandala.png";
 
 const glyphs = {
-  "north-star": northStar.url,
-  "seed-of-life": seedOfLife.url,
-  "lotus-bud": lotusBud.url,
-  lotus: lotus.url,
-  mandala: mandala.url,
+  "north-star": northStar,
+  "seed-of-life": seedOfLife,
+  "lotus-bud": lotusBud,
+  lotus: lotus,
+  mandala: mandala,
 } as const;
 
 export type GlyphName = keyof typeof glyphs;

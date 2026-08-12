@@ -3,7 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Wash } from "@/components/Wash";
 import { Glyph, GlyphVeil } from "@/components/Glyph";
-import doors from "@/assets/about-doors.jpg.asset.json";
+import doors from "@/assets/about-doors.jpg";
 
 
 export const Route = createFileRoute("/about")({
@@ -60,7 +60,7 @@ function About() {
 
         <figure className="mx-auto mt-14 max-w-md">
           <img
-            src={doors.url}
+            src={doors}
             alt="Maggie sitting cross-legged in front of an ornately carved Nepalese temple door"
             className="feather-soft h-auto w-full object-cover"
             loading="lazy"

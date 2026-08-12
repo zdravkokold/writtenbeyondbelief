@@ -1,15 +1,15 @@
-import yellowWhite from "@/assets/wash-yellow-white.webp.asset.json";
-import yellow from "@/assets/wash-yellow.webp.asset.json";
-import pinkPurple from "@/assets/wash-pink-purple.webp.asset.json";
-import blue from "@/assets/blue_Homepage.png.asset.json";
-import blueYellow from "@/assets/blue_yellow_Homepage.png.asset.json";
+import yellowWhite from "@/assets/wash-yellow-white.png";
+import yellow from "@/assets/wash-yellow.png";
+import pinkPurple from "@/assets/pink_purple About Me.png";
+import blue from "@/assets/blue _Homepage.png";
+import blueYellow from "@/assets/blue_ yellow Homepage.png";
 
 const washes = {
-  "yellow-white": yellowWhite.url,
-  yellow: yellow.url,
-  "pink-purple": pinkPurple.url,
-  blue: blue.url,
-  "blue-yellow": blueYellow.url,
+  "yellow-white": yellowWhite,
+  yellow: yellow,
+  "pink-purple": pinkPurple,
+  blue: blue,
+  "blue-yellow": blueYellow,
 } as const;
 
 export type WashTone = keyof typeof washes;
