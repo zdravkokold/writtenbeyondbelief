@@ -2,7 +2,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Wash } from "@/components/Wash";
+import { Glyph, GlyphVeil } from "@/components/Glyph";
 import doors from "@/assets/about-doors.jpg.asset.json";
+
 
 export const Route = createFileRoute("/about")({
   head: () => ({
