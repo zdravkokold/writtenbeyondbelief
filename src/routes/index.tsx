@@ -141,9 +141,16 @@ function Home() {
       </section>
 
       {/* Invitation */}
-      <section className="px-6 pt-24">
-        <div className="mx-auto max-w-2xl text-center">
+      <section className="relative overflow-hidden px-6 pt-24">
+        <GlyphVeil
+          name="seed-of-life"
+          opacity={0.08}
+          className="-top-16 left-1/2 h-[26rem] w-[26rem] -translate-x-1/2"
+        />
+        <div className="relative mx-auto max-w-2xl text-center">
+          <Glyph name="lotus-bud" opacity={0.45} className="mx-auto mb-10 h-24 w-auto" />
           <p className="font-display text-2xl leading-relaxed text-foreground md:text-3xl">
+
             If you feel called to this work, you are warmly invited to book a session.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
