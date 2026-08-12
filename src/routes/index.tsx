@@ -29,8 +29,9 @@ export const Route = createFileRoute("/")({
 function Home() {
   return (
     <div className="page-wash min-h-screen">
-      <Wash tone="yellow-white" />
+      <Wash tone="blue" secondTone="blue-yellow" />
       <div className="watermark-layer" aria-hidden />
+
       <Header />
 
       {/* Hero */}
@@ -64,9 +65,14 @@ function Home() {
 
                 <div className="my-8 flex items-center justify-center gap-4">
                   <span className="hairline w-20 md:w-24" />
-                  <span className="text-[var(--gold)]">♥</span>
+                  <Glyph
+                    name="north-star"
+                    opacity={0.75}
+                    className="h-10 w-10 mix-blend-screen"
+                  />
                   <span className="hairline w-20 md:w-24" />
                 </div>
+
 
                 <p className="font-display text-xl leading-relaxed text-white/95 drop-shadow-[0_2px_14px_rgba(0,0,0,0.45)] md:text-2xl">
                   What would it feel to remember the path that is truly yours?
