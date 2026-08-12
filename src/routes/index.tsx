@@ -97,13 +97,19 @@ function Home() {
       </section>
 
       {/* My Mission */}
-      <section className="relative px-6 pt-4 pb-8 md:pt-12">
-        <div className="mx-auto max-w-3xl text-center">
+      <section className="relative overflow-hidden px-6 pt-4 pb-8 md:pt-12">
+        <GlyphVeil
+          name="mandala"
+          opacity={0.07}
+          className="top-1/2 left-1/2 h-[42rem] w-[42rem] -translate-x-1/2 -translate-y-1/2"
+        />
+        <div className="relative mx-auto max-w-3xl text-center">
           <div className="mb-6 flex items-center justify-center gap-5">
             <span className="hairline w-16" />
-            <LotusMark />
+            <Glyph name="lotus" opacity={0.5} className="h-10 w-14" />
             <span className="hairline w-16" />
           </div>
+
 
           <h2 className="font-display text-4xl text-primary md:text-6xl">My mission</h2>
 
