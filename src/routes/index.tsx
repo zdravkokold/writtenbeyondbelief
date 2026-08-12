@@ -3,6 +3,8 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import hero from "@/assets/hero.jpg.asset.json";
 import { Wash } from "@/components/Wash";
+import { Glyph, GlyphVeil } from "@/components/Glyph";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -27,8 +29,9 @@ export const Route = createFileRoute("/")({
 function Home() {
   return (
     <div className="page-wash min-h-screen">
-      <Wash tone="yellow-white" />
+      <Wash tone="blue" secondTone="blue-yellow" />
       <div className="watermark-layer" aria-hidden />
+
       <Header />
 
       {/* Hero */}
@@ -62,9 +65,14 @@ function Home() {
 
                 <div className="my-8 flex items-center justify-center gap-4">
                   <span className="hairline w-20 md:w-24" />
-                  <span className="text-[var(--gold)]">♥</span>
+                  <Glyph
+                    name="north-star"
+                    opacity={0.75}
+                    className="h-12 w-12"
+                  />
                   <span className="hairline w-20 md:w-24" />
                 </div>
+
 
                 <p className="font-display text-xl leading-relaxed text-white/95 drop-shadow-[0_2px_14px_rgba(0,0,0,0.45)] md:text-2xl">
                   What would it feel to remember the path that is truly yours?
@@ -89,13 +97,19 @@ function Home() {
       </section>
 
       {/* My Mission */}
-      <section className="relative px-6 pt-4 pb-8 md:pt-12">
-        <div className="mx-auto max-w-3xl text-center">
+      <section className="relative overflow-hidden px-6 pt-4 pb-8 md:pt-12">
+        <GlyphVeil
+          name="mandala"
+          opacity={0.07}
+          className="top-1/2 left-1/2 h-[42rem] w-[42rem] -translate-x-1/2 -translate-y-1/2"
+        />
+        <div className="relative mx-auto max-w-3xl text-center">
           <div className="mb-6 flex items-center justify-center gap-5">
             <span className="hairline w-16" />
-            <LotusMark />
+            <Glyph name="lotus" opacity={0.5} className="h-10 w-14" />
             <span className="hairline w-16" />
           </div>
+
 
           <h2 className="font-display text-4xl text-primary md:text-6xl">My mission</h2>
 
@@ -127,9 +141,16 @@ function Home() {
       </section>
 
       {/* Invitation */}
-      <section className="px-6 pt-24">
-        <div className="mx-auto max-w-2xl text-center">
+      <section className="relative overflow-hidden px-6 pt-24">
+        <GlyphVeil
+          name="seed-of-life"
+          opacity={0.08}
+          className="-top-16 left-1/2 h-[26rem] w-[26rem] -translate-x-1/2"
+        />
+        <div className="relative mx-auto max-w-2xl text-center">
+          <Glyph name="lotus-bud" opacity={0.45} className="mx-auto mb-10 h-24 w-auto" />
           <p className="font-display text-2xl leading-relaxed text-foreground md:text-3xl">
+
             If you feel called to this work, you are warmly invited to book a session.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
@@ -156,22 +177,4 @@ function Home() {
 
 function Em({ children }: { children: React.ReactNode }) {
   return <span className="text-primary">{children}</span>;
-}
-
-function LotusMark() {
-  return (
-    <svg
-      width="40"
-      height="26"
-      viewBox="0 0 40 26"
-      fill="none"
-      stroke="var(--gold)"
-      strokeWidth="1"
-      aria-hidden
-    >
-      <path d="M20 3c3 4 4 8 4 11s-1.6 5.5-4 8c-2.4-2.5-4-5-4-8s1-7 4-11z" />
-      <path d="M20 22c-3.5-1-6.5-3-8.5-6-1-1.5-1.6-3.2-1.8-5 3 .4 5.8 1.8 8 4" />
-      <path d="M20 22c3.5-1 6.5-3 8.5-6 1-1.5 1.6-3.2 1.8-5-3 .4-5.8 1.8-8 4" />
-    </svg>
-  );
 }

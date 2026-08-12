@@ -2,7 +2,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Wash } from "@/components/Wash";
+import { Glyph, GlyphVeil } from "@/components/Glyph";
 import doors from "@/assets/about-doors.jpg.asset.json";
+
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -41,12 +43,17 @@ function About() {
       <Header />
 
       <main className="mx-auto max-w-3xl px-6 pt-16 md:pt-24">
-        <header className="text-center">
+        <header className="relative text-center">
+          <GlyphVeil
+            name="seed-of-life"
+            opacity={0.08}
+            className="-top-24 left-1/2 h-[30rem] w-[30rem] -translate-x-1/2"
+          />
           <span className="mx-auto mb-6 block h-px w-16 bg-[var(--gold)] opacity-60" />
           <h1 className="font-display text-4xl text-primary md:text-6xl">About me</h1>
           <div className="mt-6 flex items-center justify-center gap-4">
             <span className="hairline w-24" />
-            <span className="h-1.5 w-1.5 rounded-full bg-[var(--gold)]" />
+            <Glyph name="lotus-bud" opacity={0.5} className="h-14 w-auto" />
             <span className="hairline w-24" />
           </div>
         </header>
@@ -59,6 +66,7 @@ function About() {
             loading="lazy"
           />
         </figure>
+
 
         <div className="mt-16 space-y-8 text-center text-base leading-[2] text-muted-foreground md:text-lg">
           {paragraphs.map((p) => (
