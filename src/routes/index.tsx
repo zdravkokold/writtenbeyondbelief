@@ -178,21 +178,3 @@ function Home() {
 function Em({ children }: { children: React.ReactNode }) {
   return <span className="text-primary">{children}</span>;
 }
-
-function LotusMark() {
-  return (
-    <svg
-      width="40"
-      height="26"
-      viewBox="0 0 40 26"
-      fill="none"
-      stroke="var(--gold)"
-      strokeWidth="1"
-      aria-hidden
-    >
-      <path d="M20 3c3 4 4 8 4 11s-1.6 5.5-4 8c-2.4-2.5-4-5-4-8s1-7 4-11z" />
-      <path d="M20 22c-3.5-1-6.5-3-8.5-6-1-1.5-1.6-3.2-1.8-5 3 .4 5.8 1.8 8 4" />
-      <path d="M20 22c3.5-1 6.5-3 8.5-6 1-1.5 1.6-3.2 1.8-5-3 .4-5.8 1.8-8 4" />
-    </svg>
-  );
-}
