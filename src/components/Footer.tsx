@@ -9,10 +9,16 @@ const legal = [
 
 export function Footer() {
   return (
-    <footer className="mt-24 px-6 pb-14">
+    <footer className="relative mt-24 px-6 pb-14">
+      <Glyph
+        name="north-star"
+        opacity={0.14}
+        className="absolute -top-10 left-1/2 h-40 w-40 -translate-x-1/2"
+      />
       <div className="hairline mx-auto max-w-4xl" />
-      <div className="mx-auto mt-12 flex max-w-4xl flex-col items-center gap-8 text-center">
+      <div className="relative mx-auto mt-12 flex max-w-4xl flex-col items-center gap-8 text-center">
         <Logo className="h-24 w-24" />
+
 
         <nav className="flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-x-8">
           {legal.map((l) => (

@@ -2,6 +2,8 @@ import type { ReactNode } from "react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { Wash } from "./Wash";
+import { GlyphVeil } from "./Glyph";
+
 
 export function PageShell({
   title,
