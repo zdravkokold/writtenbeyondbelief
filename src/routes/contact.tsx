@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
 import { z } from "zod";
 import { toast } from "sonner";
+import { useForm, ValidationError } from "@formspree/react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
@@ -25,6 +26,7 @@ export const Route = createFileRoute("/contact")({
 });
 
 const EMAIL = "Maggie@writtenbeyondbelief.com";
+const FORMSPREE_ID = "mljrbqol";
 
 const schema = z.object({
   name: z.string().trim().min(1, "Please share your name").max(100),
@@ -34,9 +36,10 @@ const schema = z.object({
 });
 
 function Contact() {
+  const [state, handleSubmit] = useForm(FORMSPREE_ID);
   const [errors, setErrors] = useState<Record<string, string>>({});
 
-  function onSubmit(e: FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const data = Object.fromEntries(new FormData(e.currentTarget));
     const parsed = schema.safeParse(data);
@@ -49,24 +52,36 @@ function Contact() {
     }
     setErrors({});
 
-    const { name, email, phone, message } = parsed.data;
-    const body = [
-      `Name: ${name}`,
-      `Email: ${email}`,
-      phone ? `Phone: ${phone}` : null,
-      "",
-      message,
-    ]
-      .filter(Boolean)
-      .join("\n");
-
-    window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(
-      `Enquiry from ${name}`,
-    )}&body=${encodeURIComponent(body)}`;
-
-    toast.success("Your email is ready to send", {
-      description: "Your mail app will open with your message prepared.",
+    await handleSubmit(e);
+    toast.success("Your message has been sent", {
+      description: "Maggie will reply to you as soon as she can.",
     });
+  }
+
+  if (state.succeeded) {
+    return (
+      <div className="page-wash min-h-screen">
+        <div className="watermark-layer" aria-hidden />
+        <Header />
+
+        <main className="mx-auto flex max-w-2xl flex-col items-center justify-center px-6 pt-24 text-center md:pt-36">
+          <span className="mx-auto mb-6 block h-px w-16 bg-[var(--gold)] opacity-60" />
+          <h1 className="font-display text-4xl text-primary md:text-6xl">Thank you</h1>
+          <p className="mt-8 leading-[1.9] text-muted-foreground">
+            Your message has been sent. Maggie will read your enquiry personally and reply with
+            care.
+          </p>
+          <a
+            href="/"
+            className="mt-10 rounded-sm bg-primary px-12 py-4 text-xs tracking-[0.22em] text-primary-foreground uppercase transition-opacity hover:opacity-90"
+          >
+            Return home
+          </a>
+        </main>
+
+        <Footer />
+      </div>
+    );
   }
 
   return (
@@ -84,15 +99,27 @@ function Contact() {
             <span className="hairline w-24" />
           </div>
           <p className="mt-10 leading-[1.9] text-muted-foreground">
-            If you have a question, or feel called to book a session, please leave a
-            message below. I read every enquiry personally and will reply with care.
+            If you have a question, or feel called to book a session, please leave a message below. I
+            read every enquiry personally and will reply with care.
           </p>
         </header>
 
         <form onSubmit={onSubmit} noValidate className="mt-14 space-y-8">
-          <Field label="Your name" name="name" error={errors["name"]} />
-          <Field label="Email address" name="email" type="email" error={errors["email"]} />
-          <Field label="Telephone (optional)" name="phone" type="tel" error={errors["phone"]} />
+          <Field label="Your name" name="name" error={errors["name"]} formErrors={state.errors} />
+          <Field
+            label="Email address"
+            name="email"
+            type="email"
+            error={errors["email"]}
+            formErrors={state.errors}
+          />
+          <Field
+            label="Telephone (optional)"
+            name="phone"
+            type="tel"
+            error={errors["phone"]}
+            formErrors={state.errors}
+          />
 
           <div>
             <label
@@ -109,14 +136,22 @@ function Contact() {
               className="w-full resize-none rounded-sm border-0 border-b border-input bg-card/50 px-4 py-3 leading-relaxed outline-none transition-colors focus:border-[var(--gold)]"
             />
             {errors["message"] && <ErrorText>{errors["message"]}</ErrorText>}
+            <ValidationError
+              field="message"
+              errors={state.errors}
+              className="mt-2 text-sm text-destructive"
+            />
           </div>
+
+          <ValidationError errors={state.errors} className="text-sm text-destructive" />
 
           <div className="pt-4 text-center">
             <button
               type="submit"
-              className="rounded-sm bg-primary px-12 py-4 text-xs tracking-[0.22em] text-primary-foreground uppercase transition-opacity hover:opacity-90"
+              disabled={state.submitting}
+              className="rounded-sm bg-primary px-12 py-4 text-xs tracking-[0.22em] text-primary-foreground uppercase transition-opacity hover:opacity-90 disabled:opacity-60"
             >
-              Send message
+              {state.submitting ? "Sending..." : "Send message"}
             </button>
           </div>
         </form>
@@ -148,11 +183,13 @@ function Field({
   name,
   type = "text",
   error,
+  formErrors,
 }: {
   label: string;
   name: string;
   type?: string;
   error?: string | undefined;
+  formErrors: ReturnType<typeof useForm>[0]["errors"];
 }) {
   return (
     <div>
@@ -170,6 +207,11 @@ function Field({
         className="w-full rounded-sm border-0 border-b border-input bg-card/50 px-4 py-3 outline-none transition-colors focus:border-[var(--gold)]"
       />
       {error && <ErrorText>{error}</ErrorText>}
+      <ValidationError
+        field={name}
+        errors={formErrors}
+        className="mt-2 text-sm text-destructive"
+      />
     </div>
   );
 }
