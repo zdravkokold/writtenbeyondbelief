@@ -3,6 +3,8 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import hero from "@/assets/hero.jpg.asset.json";
 import { Wash } from "@/components/Wash";
+import { Glyph, GlyphVeil } from "@/components/Glyph";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
