@@ -1,5 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Logo } from "./Logo";
+import { Glyph } from "./Glyph";
+
 
 const legal = [
   { to: "/privacy", label: "Privacy & Cookie Policy" },

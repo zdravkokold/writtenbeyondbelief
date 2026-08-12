@@ -51,21 +51,28 @@ const experience = [
 function Work() {
   return (
     <div className="page-wash min-h-screen">
+      <Wash tone="yellow" />
       <div className="watermark-layer" aria-hidden />
       <Header />
 
-      <main className="mx-auto max-w-3xl px-6 pt-16 md:pt-24">
-        <header className="text-center">
+      <main className="relative mx-auto max-w-3xl px-6 pt-16 md:pt-24">
+        <GlyphVeil
+          name="mandala"
+          opacity={0.06}
+          className="-top-28 left-1/2 h-[36rem] w-[36rem] -translate-x-1/2"
+        />
+        <header className="relative text-center">
           <span className="mx-auto mb-6 block h-px w-16 bg-[var(--gold)] opacity-60" />
           <h1 className="font-display text-4xl text-primary md:text-6xl">
             The work I offer
           </h1>
           <div className="mt-6 flex items-center justify-center gap-4">
             <span className="hairline w-24" />
-            <span className="h-1.5 w-1.5 rounded-full bg-[var(--gold)]" />
+            <Glyph name="lotus" opacity={0.5} className="h-9 w-13" />
             <span className="hairline w-24" />
           </div>
         </header>
+
 
         <div className="mt-14 space-y-8 text-center text-base leading-[2] text-muted-foreground md:text-lg">
           <p>
