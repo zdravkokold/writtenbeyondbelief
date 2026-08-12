@@ -53,6 +53,9 @@ function Contact() {
     setErrors({});
 
     await handleSubmit(e);
+    toast.success("Your message has been sent", {
+      description: "Maggie will reply to you as soon as she can.",
+    });
   }
 
   if (state.succeeded) {
@@ -102,9 +105,21 @@ function Contact() {
         </header>
 
         <form onSubmit={onSubmit} noValidate className="mt-14 space-y-8">
-          <Field label="Your name" name="name" error={errors["name"]} />
-          <Field label="Email address" name="email" type="email" error={errors["email"]} />
-          <Field label="Telephone (optional)" name="phone" type="tel" error={errors["phone"]} />
+          <Field label="Your name" name="name" error={errors["name"]} formErrors={state.errors} />
+          <Field
+            label="Email address"
+            name="email"
+            type="email"
+            error={errors["email"]}
+            formErrors={state.errors}
+          />
+          <Field
+            label="Telephone (optional)"
+            name="phone"
+            type="tel"
+            error={errors["phone"]}
+            formErrors={state.errors}
+          />
 
           <div>
             <label
@@ -121,7 +136,11 @@ function Contact() {
               className="w-full resize-none rounded-sm border-0 border-b border-input bg-card/50 px-4 py-3 leading-relaxed outline-none transition-colors focus:border-[var(--gold)]"
             />
             {errors["message"] && <ErrorText>{errors["message"]}</ErrorText>}
-            <ValidationError field="message" errors={state.errors} className="mt-2 text-sm text-destructive" />
+            <ValidationError
+              field="message"
+              errors={state.errors}
+              className="mt-2 text-sm text-destructive"
+            />
           </div>
 
           <ValidationError errors={state.errors} className="text-sm text-destructive" />
@@ -164,11 +183,13 @@ function Field({
   name,
   type = "text",
   error,
+  formErrors,
 }: {
   label: string;
   name: string;
   type?: string;
   error?: string | undefined;
+  formErrors: ReturnType<typeof useForm>[0]["errors"];
 }) {
   return (
     <div>
@@ -186,12 +207,14 @@ function Field({
         className="w-full rounded-sm border-0 border-b border-input bg-card/50 px-4 py-3 outline-none transition-colors focus:border-[var(--gold)]"
       />
       {error && <ErrorText>{error}</ErrorText>}
-      <ValidationError field={name} errors={stateGlobal} className="mt-2 text-sm text-destructive" />
+      <ValidationError
+        field={name}
+        errors={formErrors}
+        className="mt-2 text-sm text-destructive"
+      />
     </div>
   );
 }
-
-let stateGlobal: ReturnType<typeof useForm>[0] | undefined;
 
 function ErrorText({ children }: { children: React.ReactNode }) {
   return <p className="mt-2 text-sm text-destructive">{children}</p>;
