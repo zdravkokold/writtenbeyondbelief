@@ -34,7 +34,7 @@ export function Glyph({
       alt=""
       aria-hidden
       loading="lazy"
-      className={`pointer-events-none select-none mix-blend-multiply ${className}`}
+      className={`pointer-events-none select-none ${className}`}
       style={{ opacity }}
     />
   );

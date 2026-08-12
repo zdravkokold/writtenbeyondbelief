@@ -68,7 +68,7 @@ function Home() {
                   <Glyph
                     name="north-star"
                     opacity={0.75}
-                    className="h-10 w-10 mix-blend-screen"
+                    className="h-12 w-12"
                   />
                   <span className="hairline w-20 md:w-24" />
                 </div>
