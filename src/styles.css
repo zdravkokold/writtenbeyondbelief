@@ -67,7 +67,8 @@
   --sand: oklch(0.9 0.028 78);
   --linen: oklch(0.955 0.014 82);
 
-  --gradient-watercolour: radial-gradient(
+  --gradient-watercolour:
+    radial-gradient(
       ellipse 60% 45% at 12% 18%,
       color-mix(in oklab, var(--sand) 55%, transparent),
       transparent 70%
@@ -98,9 +99,11 @@
 
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   body {
+    overflow-x: hidden;
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
@@ -247,9 +250,29 @@
   animation: rise 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-/* Stronger all-round feathering for portrait photos */
-@utility feather-soft {
-  -webkit-mask-image: radial-gradient(ellipse 62% 62% at 50% 50%, #000 30%, rgba(0,0,0,0.45) 62%, transparent 88%);
-  mask-image: radial-gradient(ellipse 62% 62% at 50% 50%, #000 30%, rgba(0,0,0,0.45) 62%, transparent 88%);
+@utility page-enter {
+  animation: rise 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .rise-in,
+  .page-enter {
+    animation: none;
+  }
+}
+
+/* Stronger all-round feathering for portrait photos */
+@utility feather-soft {
+  -webkit-mask-image: radial-gradient(
+    ellipse 62% 62% at 50% 50%,
+    #000 30%,
+    rgba(0, 0, 0, 0.45) 62%,
+    transparent 88%
+  );
+  mask-image: radial-gradient(
+    ellipse 62% 62% at 50% 50%,
+    #000 30%,
+    rgba(0, 0, 0, 0.45) 62%,
+    transparent 88%
+  );
+}

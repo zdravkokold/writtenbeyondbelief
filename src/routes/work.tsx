@@ -4,7 +4,6 @@ import { Footer } from "@/components/Footer";
 import { Wash } from "@/components/Wash";
 import { Glyph, GlyphVeil } from "@/components/Glyph";
 
-
 export const Route = createFileRoute("/work")({
   head: () => ({
     meta: [
@@ -17,8 +16,7 @@ export const Route = createFileRoute("/work")({
       { property: "og:title", content: "The Work I Offer | Written Beyond Belief" },
       {
         property: "og:description",
-        content:
-          "Intuitively guided energy healing sessions near London Bridge. 45 minutes, £75.",
+        content: "Intuitively guided energy healing sessions near London Bridge. 45 minutes, £75.",
       },
     ],
   }),
@@ -55,7 +53,7 @@ function Work() {
       <div className="watermark-layer" aria-hidden />
       <Header />
 
-      <main className="relative mx-auto max-w-3xl px-6 pt-16 md:pt-24">
+      <main className="page-enter relative mx-auto max-w-3xl px-6 pt-16 md:pt-24">
         <GlyphVeil
           name="mandala"
           opacity={0.06}
@@ -63,9 +61,7 @@ function Work() {
         />
         <header className="relative text-center">
           <span className="mx-auto mb-6 block h-px w-16 bg-[var(--gold)] opacity-60" />
-          <h1 className="font-display text-4xl text-primary md:text-6xl">
-            The work I offer
-          </h1>
+          <h1 className="font-display text-4xl text-primary md:text-6xl">The work I offer</h1>
           <div className="mt-6 flex items-center justify-center gap-4">
             <span className="hairline w-24" />
             {/* <Glyph name="lotus" opacity={0.5} className="h-9 w-13" /> */}
@@ -73,16 +69,15 @@ function Work() {
           </div>
         </header>
 
-
         <div className="mt-14 space-y-8 text-center text-base leading-[2] text-muted-foreground md:text-lg">
           <p>
-            Each healing session is intuitively guided and shaped around what you need
-            in the moment.
+            Each healing session is intuitively guided and shaped around what you need in the
+            moment.
           </p>
           <p>
-            Together, we explore how you are feeling physically, mentally, emotionally
-            and energetically. Depending on what arises, I support you using different
-            energy healing techniques.
+            Together, we explore how you are feeling physically, mentally, emotionally and
+            energetically. Depending on what arises, I support you using different energy healing
+            techniques.
           </p>
           <p>
             The intention behind each session is to create space for clarity, release,
@@ -130,9 +125,7 @@ function Work() {
 function Section({ title, items }: { title: string; items: string[] }) {
   return (
     <section className="mt-24">
-      <h2 className="font-display text-center text-3xl text-primary md:text-4xl">
-        {title}
-      </h2>
+      <h2 className="font-display text-center text-3xl text-primary md:text-4xl">{title}</h2>
       <span className="hairline mx-auto mt-6 mb-10 block w-32" />
       <ul className="mx-auto max-w-2xl space-y-5">
         {items.map((item) => (

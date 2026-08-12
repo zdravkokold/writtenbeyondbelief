@@ -13,20 +13,13 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <header
-      className={
-        overlay
-          ? "absolute inset-x-0 top-0 z-30"
-          : "relative z-30"
-
-      }
-    >
+    <header className={overlay ? "absolute inset-x-0 top-0 z-30" : "relative z-30"}>
       <div className="relative mx-auto max-w-6xl px-6 py-6 md:py-8">
         <div className="flex flex-col items-center gap-4">
           <Link to="/" className="flex min-w-0 flex-col items-center gap-2">
-            <Logo className="h-14 w-14 shrink-0 md:h-16 md:w-16" />
+            {!overlay && <Logo className="h-14 w-14 shrink-0 md:h-16 md:w-16" />}
             <span
-              className={`font-display truncate text-xl tracking-wide md:text-3xl ${
+              className={`font-display truncate text-2xl tracking-wide md:text-3xl ${
                 overlay ? "text-white drop-shadow-md" : "text-foreground"
               }`}
             >
@@ -59,7 +52,6 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
           {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
-
 
       {open && (
         <div className="mx-6 mb-4 rounded-lg bg-card/95 px-6 py-5 shadow-[var(--shadow-soft)] backdrop-blur md:hidden">

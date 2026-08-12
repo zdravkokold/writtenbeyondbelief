@@ -5,7 +5,6 @@ import { Wash } from "@/components/Wash";
 import { Glyph, GlyphVeil } from "@/components/Glyph";
 import doors from "@/assets/about-doors.jpg";
 
-
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
@@ -18,8 +17,7 @@ export const Route = createFileRoute("/about")({
       { property: "og:title", content: "About Me — Maggie | Written Beyond Belief" },
       {
         property: "og:description",
-        content:
-          "Maggie's journey from contemporary dance to yoga teaching and Jikochiyu healing.",
+        content: "Maggie's journey from contemporary dance to yoga teaching and Jikochiyu healing.",
       },
     ],
   }),
@@ -42,7 +40,7 @@ function About() {
       <div className="watermark-layer" aria-hidden />
       <Header />
 
-      <main className="mx-auto max-w-3xl px-6 pt-16 md:pt-24">
+      <main className="page-enter mx-auto max-w-3xl px-6 pt-16 md:pt-24">
         <header className="relative text-center">
           <GlyphVeil
             name="seed-of-life"
@@ -66,7 +64,6 @@ function About() {
             loading="lazy"
           />
         </figure>
-
 
         <div className="mt-16 space-y-8 text-center text-base leading-[2] text-muted-foreground md:text-lg">
           {paragraphs.map((p) => (

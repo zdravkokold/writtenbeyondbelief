@@ -4,7 +4,6 @@ import { Footer } from "./Footer";
 import { Wash } from "./Wash";
 import { GlyphVeil } from "./Glyph";
 
-
 export function PageShell({
   title,
   intro,
@@ -19,7 +18,7 @@ export function PageShell({
       <Wash tone="yellow" />
       <div className="watermark-layer" aria-hidden />
       <Header />
-      <main className="relative mx-auto max-w-3xl px-6 pt-16 pb-8 md:pt-24">
+      <main className="page-enter relative mx-auto max-w-3xl px-6 pt-16 pb-8 md:pt-24">
         <GlyphVeil
           name="mandala"
           opacity={0.06}
@@ -32,9 +31,7 @@ export function PageShell({
             {title}
           </h1>
           {intro && (
-            <p className="mx-auto mt-6 max-w-xl leading-relaxed text-muted-foreground">
-              {intro}
-            </p>
+            <p className="mx-auto mt-6 max-w-xl leading-relaxed text-muted-foreground">{intro}</p>
           )}
           <span className="mx-auto mt-8 block h-px w-16 bg-[var(--gold)] opacity-60" />
         </header>

@@ -5,7 +5,6 @@ import hero from "@/assets/hero.jpg";
 import { Wash } from "@/components/Wash";
 import { Glyph, GlyphVeil } from "@/components/Glyph";
 
-
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -32,63 +31,60 @@ function Home() {
       <Wash tone="blue" secondTone="blue-yellow" />
       <div className="watermark-layer" aria-hidden />
 
-      <Header />
+      <Header overlay />
 
       {/* Hero */}
       <section className="relative">
-        <div className="relative h-[68vh] max-h-[720px] min-h-[480px] w-full overflow-hidden">
+        <div className="relative h-[68svh] max-h-[720px] min-h-[540px] w-full overflow-hidden">
           <img
             src={hero}
             alt="A woman standing on a clifftop above the sea with her arms open to the sky"
-            className="feather-bottom h-full w-full object-cover object-center"
+            className="h-full w-full object-cover object-[48%_center]"
           />
           <div
             className="pointer-events-none absolute inset-0"
             style={{
               background:
-                "radial-gradient(ellipse 48% 58% at 76% 50%, rgba(40,48,44,0.40), transparent 72%)",
+                "linear-gradient(90deg, rgba(18,35,41,0.02) 35%, rgba(17,38,45,0.18) 55%, rgba(11,31,38,0.56) 100%)",
             }}
           />
           <div
             className="pointer-events-none absolute inset-0"
-            style={{ background: "var(--gradient-veil)" }}
+            style={{
+              background:
+                "linear-gradient(to bottom, transparent 67%, color-mix(in oklab, var(--background) 35%, transparent) 83%, var(--background) 100%)",
+            }}
           />
 
-          <div className="absolute inset-0 flex items-center">
-            <div className="mx-auto w-full max-w-6xl px-6">
-              <div className="rise-in mx-auto max-w-lg text-center md:mr-[5%] md:ml-auto">
-                <h1 className="font-display text-[1.75rem] leading-snug text-white drop-shadow-[0_2px_18px_rgba(0,0,0,0.45)] md:text-[2.35rem]">
-
-                  Have you ever wondered what holds you back from creating from the
-                  wisdom within you?
+          <div className="absolute inset-0 pt-24 md:flex md:items-center md:pt-20">
+            <div className="mx-auto h-full w-full max-w-[1440px] px-6 md:h-auto">
+              <div className="rise-in mx-auto flex h-full max-w-lg flex-col px-3 pt-2 pb-32 text-center md:mr-0 md:ml-auto md:block md:h-auto md:max-w-xl md:px-0 md:py-0">
+                <h1 className="font-display text-[1.65rem] leading-[1.13] text-white drop-shadow-[0_2px_18px_rgba(0,0,0,0.45)] md:text-[2.3rem]">
+                  Have you ever wondered what holds you back from creating from the wisdom within
+                  you?
                 </h1>
 
-                <div className="my-8 flex items-center justify-center gap-4">
-                  <span className="hairline w-20 md:w-24" />
-                  {/* <Glyph
-                    name="north-star"
-                    opacity={0.75}
-                    className="h-12 w-12"
-                  /> */}
-                  <span className="hairline w-20 md:w-24" />
+                <div className="mt-5 flex items-center justify-center gap-3 md:my-6">
+                  <span className="hairline w-20 md:w-28" />
+                  <span className="text-lg leading-none text-[var(--gold)]" aria-hidden>
+                    ♥
+                  </span>
+                  <span className="hairline w-20 md:w-28" />
                 </div>
 
+                <div className="mt-auto md:mt-0">
+                  <p className="font-display text-[1.35rem] leading-snug text-white/95 drop-shadow-[0_2px_14px_rgba(0,0,0,0.45)] md:text-[1.7rem]">
+                    What would it feel to remember the path that is truly yours?
+                  </p>
 
-                <p className="font-display text-xl leading-relaxed text-white/95 drop-shadow-[0_2px_14px_rgba(0,0,0,0.45)] md:text-2xl">
-                  What would it feel to remember the path that is truly yours?
-                </p>
-                <p className="mt-4 text-sm leading-relaxed text-white/85 drop-shadow-[0_2px_14px_rgba(0,0,0,0.45)] md:text-base">
-                  Let us journey together into the space where The Self is explored
-                  beyond existing beliefs.
-                </p>
-
-                <div className="mt-10 flex justify-center">
-                  <Link
-                    to="/work"
-                    className="inline-flex items-center justify-center rounded-sm bg-primary/90 px-10 py-4 text-xs tracking-[0.22em] text-primary-foreground uppercase backdrop-blur-sm transition-colors hover:bg-primary"
-                  >
-                    Begin your journey
-                  </Link>
+                  <div className="mt-7 flex justify-center md:mt-8">
+                    <Link
+                      to="/work"
+                      className="inline-flex min-w-64 items-center justify-center rounded-sm bg-primary/85 px-10 py-4 text-xs font-medium tracking-[0.18em] text-primary-foreground uppercase backdrop-blur-sm transition-colors hover:bg-primary"
+                    >
+                      Begin your journey
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -110,7 +106,6 @@ function Home() {
             <span className="hairline w-16" />
           </div>
 
-
           <h2 className="font-display text-4xl text-primary md:text-6xl">My mission</h2>
 
           <div className="mt-6 mb-12 flex items-center justify-center gap-4">
@@ -121,20 +116,18 @@ function Home() {
 
           <div className="space-y-8 text-base leading-[2] text-muted-foreground md:text-lg">
             <p>
-              My mission is to support others in connecting with themselves. I am
-              devoted to helping others <Em>restore balance</Em>, <Em>harmonise</Em>{" "}
-              with their inner needs, and create from the guidance of their unique
-              essence and wisdom of a knowing heart.
+              My mission is to support others in connecting with themselves. I am devoted to helping
+              others <Em>restore balance</Em>, <Em>harmonise</Em> with their inner needs, and create
+              from the guidance of their unique essence and wisdom of a knowing heart.
             </p>
             <p>
-              I am dedicated to the path of expansion, where <Em>creativity ignites</Em>{" "}
-              from a place of abundance and where life unfolds through the recognition
-              that each of us holds <Em>all answers and possibilities</Em> within.
+              I am dedicated to the path of expansion, where <Em>creativity ignites</Em> from a
+              place of abundance and where life unfolds through the recognition that each of us
+              holds <Em>all answers and possibilities</Em> within.
             </p>
             <p>
-              Each step on this work is guided by <Em>integrity</Em>,{" "}
-              <Em>authenticity</Em> and <Em>gratitude</Em> — an honouring of the
-              uniqueness of each individual journey.
+              Each step on this work is guided by <Em>integrity</Em>, <Em>authenticity</Em> and{" "}
+              <Em>gratitude</Em> — an honouring of the uniqueness of each individual journey.
             </p>
           </div>
         </div>
@@ -150,7 +143,6 @@ function Home() {
         <div className="relative mx-auto max-w-2xl text-center">
           {/* <Glyph name="lotus-bud" opacity={0.45} className="mx-auto mb-10 h-24 w-auto" /> */}
           <p className="font-display text-2xl leading-relaxed text-foreground md:text-3xl">
-
             If you feel called to this work, you are warmly invited to book a session.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">

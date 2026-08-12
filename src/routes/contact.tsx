@@ -66,7 +66,7 @@ function Contact() {
         <div className="watermark-layer" aria-hidden />
         <Header />
 
-        <main className="mx-auto flex max-w-2xl flex-col items-center justify-center px-6 pt-24 text-center md:pt-36">
+        <main className="page-enter mx-auto flex max-w-2xl flex-col items-center justify-center px-6 pt-24 text-center md:pt-36">
           <span className="mx-auto mb-6 block h-px w-16 bg-[var(--gold)] opacity-60" />
           <h1 className="font-display text-4xl text-primary md:text-6xl">Thank you</h1>
           <p className="mt-8 leading-[1.9] text-muted-foreground">
@@ -92,7 +92,7 @@ function Contact() {
       <div className="watermark-layer" aria-hidden />
       <Header />
 
-      <main className="mx-auto max-w-2xl px-6 pt-16 md:pt-24">
+      <main className="page-enter mx-auto max-w-2xl px-6 pt-16 md:pt-24">
         <header className="text-center">
           <span className="mx-auto mb-6 block h-px w-16 bg-[var(--gold)] opacity-60" />
           <h1 className="font-display text-4xl text-primary md:text-6xl">Contact</h1>
@@ -102,8 +102,8 @@ function Contact() {
             <span className="hairline w-24" />
           </div>
           <p className="mt-10 leading-[1.9] text-muted-foreground">
-            If you have a question, or feel called to book a session, please leave a message below. I
-            read every enquiry personally and will reply with care.
+            If you have a question, or feel called to book a session, please leave a message below.
+            I read every enquiry personally and will reply with care.
           </p>
         </header>
 
@@ -210,11 +210,7 @@ function Field({
         className="w-full rounded-sm border-0 border-b border-input bg-card/50 px-4 py-3 outline-none transition-colors focus:border-[var(--gold)]"
       />
       {error && <ErrorText>{error}</ErrorText>}
-      <ValidationError
-        field={name}
-        errors={formErrors}
-        className="mt-2 text-sm text-destructive"
-      />
+      <ValidationError field={name} errors={formErrors} className="mt-2 text-sm text-destructive" />
     </div>
   );
 }
