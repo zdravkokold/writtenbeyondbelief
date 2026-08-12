@@ -65,11 +65,11 @@ function Home() {
 
                 <div className="my-8 flex items-center justify-center gap-4">
                   <span className="hairline w-20 md:w-24" />
-                  <Glyph
+                  {/* <Glyph
                     name="north-star"
                     opacity={0.75}
                     className="h-12 w-12"
-                  />
+                  /> */}
                   <span className="hairline w-20 md:w-24" />
                 </div>
 
@@ -106,7 +106,7 @@ function Home() {
         <div className="relative mx-auto max-w-3xl text-center">
           <div className="mb-6 flex items-center justify-center gap-5">
             <span className="hairline w-16" />
-            <Glyph name="lotus" opacity={0.5} className="h-10 w-14" />
+            {/* <Glyph name="lotus" opacity={0.5} className="h-10 w-14" /> */}
             <span className="hairline w-16" />
           </div>
 
@@ -148,7 +148,7 @@ function Home() {
           className="-top-16 left-1/2 h-[26rem] w-[26rem] -translate-x-1/2"
         />
         <div className="relative mx-auto max-w-2xl text-center">
-          <Glyph name="lotus-bud" opacity={0.45} className="mx-auto mb-10 h-24 w-auto" />
+          {/* <Glyph name="lotus-bud" opacity={0.45} className="mx-auto mb-10 h-24 w-auto" /> */}
           <p className="font-display text-2xl leading-relaxed text-foreground md:text-3xl">
 
             If you feel called to this work, you are warmly invited to book a session.

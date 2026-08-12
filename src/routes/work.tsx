@@ -68,7 +68,7 @@ function Work() {
           </h1>
           <div className="mt-6 flex items-center justify-center gap-4">
             <span className="hairline w-24" />
-            <Glyph name="lotus" opacity={0.5} className="h-9 w-13" />
+            {/* <Glyph name="lotus" opacity={0.5} className="h-9 w-13" /> */}
             <span className="hairline w-24" />
           </div>
         </header>
