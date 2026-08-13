@@ -21,7 +21,7 @@ export function PageShell({
       <main className="page-enter relative mx-auto max-w-3xl px-6 pt-16 pb-8 md:pt-24">
         <GlyphVeil
           name="mandala"
-          opacity={0.06}
+          opacity={0.18}
           className="-top-32 left-1/2 h-[34rem] w-[34rem] -translate-x-1/2"
         />
         <header className="relative mb-16 text-center">

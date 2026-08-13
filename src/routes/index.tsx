@@ -97,13 +97,13 @@ function Home() {
       <section className="relative overflow-hidden px-6 pt-4 pb-8 md:pt-12">
         <GlyphVeil
           name="mandala"
-          opacity={0.07}
+          opacity={0.2}
           className="top-1/2 left-1/2 h-[42rem] w-[42rem] -translate-x-1/2 -translate-y-1/2"
         />
         <div className="relative mx-auto max-w-3xl text-center">
           <div className="mb-6 flex items-center justify-center gap-5">
             <span className="hairline w-16" />
-            {/* <Glyph name="lotus" opacity={0.5} className="h-10 w-14" /> */}
+            <Glyph name="lotus" opacity={0.75} className="h-9 w-14" />
             <span className="hairline w-16" />
           </div>
 
@@ -138,7 +138,7 @@ function Home() {
       <section className="relative overflow-hidden px-6 pt-24">
         <GlyphVeil
           name="seed-of-life"
-          opacity={0.08}
+          opacity={0.22}
           className="-top-16 left-1/2 h-[26rem] w-[26rem] -translate-x-1/2"
         />
         <div className="relative mx-auto max-w-2xl text-center">
