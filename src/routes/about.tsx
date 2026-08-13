@@ -44,7 +44,7 @@ function About() {
         <header className="relative text-center">
           <GlyphVeil
             name="seed-of-life"
-            opacity={0.08}
+            opacity={0.22}
             className="-top-24 left-1/2 h-[30rem] w-[30rem] -translate-x-1/2"
           />
           <span className="mx-auto mb-6 block h-px w-16 bg-[var(--gold)] opacity-60" />
