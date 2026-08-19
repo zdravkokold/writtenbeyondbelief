@@ -13,6 +13,46 @@ import appCss from "../styles.css?url";
 import { Toaster } from "@/components/ui/sonner";
 import { CookieConsent } from "@/components/CookieConsent";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import {
+  absoluteUrl,
+  defaultDescription,
+  defaultOgDescription,
+  SITE_NAME,
+  SITE_URL,
+} from "../lib/seo";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: SITE_NAME,
+      description: defaultDescription,
+      inLanguage: "en-GB",
+    },
+    {
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
+      name: SITE_NAME,
+      url: SITE_URL,
+      email: "Maggie@writtenbeyondbelief.com",
+      description: defaultOgDescription,
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": `${SITE_URL}/#localbusiness`,
+      name: SITE_NAME,
+      url: SITE_URL,
+      email: "Maggie@writtenbeyondbelief.com",
+      description:
+        "Intuitively guided energy healing sessions in London near London Bridge Station.",
+      areaServed: "London, United Kingdom",
+      priceRange: "££",
+    },
+  ],
+};
 
 function NotFoundComponent() {
   return (
@@ -79,28 +119,32 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Written Beyond Belief — Energy Healing with Maggie" },
-      {
-        name: "description",
-        content:
-          "Intuitively guided energy healing sessions in London. Explore, expand and create from the wisdom within you.",
-      },
+      { title: `${SITE_NAME} | The Person Behind Written Beyond Belief` },
+      { name: "description", content: defaultDescription },
       { name: "author", content: "Maggie — Written Beyond Belief" },
+      { name: "robots", content: "index, follow" },
+      { name: "googlebot", content: "index, follow" },
+      { property: "og:site_name", content: SITE_NAME },
+      { property: "og:title", content: SITE_NAME },
+      { property: "og:description", content: defaultOgDescription },
+      { property: "og:url", content: SITE_URL },
       { property: "og:type", content: "website" },
+      { property: "og:locale", content: "en_GB" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: SITE_NAME },
+      { name: "twitter:description", content: defaultOgDescription },
     ],
     links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
+      { rel: "stylesheet", href: appCss },
+      { rel: "canonical", href: SITE_URL },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Karla:wght@300;400;500&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Great+Vibes&family=Karla:wght@300;400;500&display=swap",
       },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
+      { rel: "sitemap", type: "application/xml", href: "/sitemap.xml" },
     ],
   }),
 
@@ -112,9 +156,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en-GB">
       <head>
         <HeadContent />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
       <body>
         {children}
@@ -129,7 +177,6 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
       <CookieConsent />
       <Toaster />

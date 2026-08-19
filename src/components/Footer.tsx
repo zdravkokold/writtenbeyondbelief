@@ -5,8 +5,8 @@ import { Glyph } from "./Glyph";
 
 const legal = [
   { to: "/privacy", label: "Privacy & Cookie Policy" },
-  { to: "/terms", label: "T&C / Refund Policy" },
-  { to: "/disclaimer", label: "Client Disclaimer & Informed Consent" },
+  { to: "/terms", label: "Terms & Conditions" },
+  { to: "/disclaimer", label: "Client Disclaimer" },
 ] as const;
 
 export function Footer() {
@@ -14,8 +14,9 @@ export function Footer() {
     <footer className="relative mt-24 px-6 pb-14">
       <Glyph
         name="north-star"
-        opacity={0.14}
-        className="absolute -top-10 left-1/2 h-40 w-40 -translate-x-1/2"
+        plain
+        opacity={0.22}
+        className="absolute -top-6 left-1/2 h-16 w-16 -translate-x-1/2"
       />
       <div className="hairline mx-auto max-w-4xl" />
       <div className="relative mx-auto mt-12 flex max-w-4xl flex-col items-center gap-8 text-center">

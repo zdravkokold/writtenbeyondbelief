@@ -31,18 +31,18 @@ export function Wash({
       <img
         src={washes[tone]}
         alt=""
-        className="absolute inset-0 h-full w-full object-cover opacity-55"
+        className="absolute inset-0 h-full w-full object-cover opacity-75"
       />
       {secondTone && (
         <img
           src={washes[secondTone]}
           alt=""
-          className="absolute inset-0 h-full w-full object-cover opacity-45"
+          className="absolute inset-0 h-full w-full object-cover opacity-60"
           style={{
             WebkitMaskImage:
-              "linear-gradient(to bottom, transparent 0%, #000 45%, #000 100%)",
+              "linear-gradient(to bottom, transparent 0%, #000 40%, #000 100%)",
             maskImage:
-              "linear-gradient(to bottom, transparent 0%, #000 45%, #000 100%)",
+              "linear-gradient(to bottom, transparent 0%, #000 40%, #000 100%)",
           }}
         />
       )}
@@ -50,7 +50,7 @@ export function Wash({
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(to bottom, color-mix(in oklab, var(--background) 62%, transparent), color-mix(in oklab, var(--background) 82%, transparent))",
+            "linear-gradient(to bottom, color-mix(in oklab, var(--background) 42%, transparent), color-mix(in oklab, var(--background) 58%, transparent))",
         }}
       />
     </div>

@@ -4,10 +4,10 @@ import { _ as Link, f as createRouter, g as createRootRouteWithContext, h as cre
 import { n as require_jsx_runtime, t as QueryClientProvider } from "../_libs/react+tanstack__react-query.mjs";
 import { t as Toaster } from "../_libs/sonner.mjs";
 import { t as QueryClient } from "../_libs/tanstack__query-core.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-B3V3uPq2.js
+//#region node_modules/.nitro/vite/services/ssr/assets/router-Cb2jYcmg.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
-var styles_default = "/assets/styles-cSUTwOQM.css";
+var styles_default = "/assets/styles-Ch-dTOI9.css";
 var Toaster$1 = ({ ...props }) => {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Toaster, {
 		className: "toaster group",
@@ -243,7 +243,7 @@ function RootComponent() {
 		]
 	});
 }
-var $$splitComponentImporter$6 = () => import("./routes-DX1SLdKb.mjs");
+var $$splitComponentImporter$6 = () => import("./routes-CUeIWgz-.mjs");
 var Route$6 = createFileRoute("/")({
 	head: () => ({ meta: [
 		{ title: "Written Beyond Belief — Energy Healing with Maggie" },
@@ -262,17 +262,17 @@ var Route$6 = createFileRoute("/")({
 	] }),
 	component: lazyRouteComponent($$splitComponentImporter$6, "component")
 });
-var $$splitComponentImporter$5 = () => import("./about-Dw3WQXoX.mjs");
+var $$splitComponentImporter$5 = () => import("./about-DfG_Rxsu.mjs");
 var Route$5 = createFileRoute("/about")({
 	head: () => ({ meta: [
-		{ title: "About Me — Maggie | Written Beyond Belief" },
+		{ title: "The Person Behind Written Beyond Belief — Maggie" },
 		{
 			name: "description",
 			content: "Maggie's journey from contemporary dance to yoga teaching and Jikochiyu healing, and the presence she brings to every session."
 		},
 		{
 			property: "og:title",
-			content: "About Me — Maggie | Written Beyond Belief"
+			content: "The Person Behind Written Beyond Belief — Maggie"
 		},
 		{
 			property: "og:description",
@@ -281,7 +281,7 @@ var Route$5 = createFileRoute("/about")({
 	] }),
 	component: lazyRouteComponent($$splitComponentImporter$5, "component")
 });
-var $$splitComponentImporter$4 = () => import("./contact-B7mZsWaW.mjs");
+var $$splitComponentImporter$4 = () => import("./contact-D1frUTtR.mjs");
 var Route$4 = createFileRoute("/contact")({
 	head: () => ({ meta: [
 		{ title: "Contact — Written Beyond Belief" },
@@ -300,7 +300,7 @@ var Route$4 = createFileRoute("/contact")({
 	] }),
 	component: lazyRouteComponent($$splitComponentImporter$4, "component")
 });
-var $$splitComponentImporter$3 = () => import("./disclaimer-DW53jL6T.mjs");
+var $$splitComponentImporter$3 = () => import("./disclaimer-pjDllAeo.mjs");
 var Route$3 = createFileRoute("/disclaimer")({
 	head: () => ({ meta: [
 		{ title: "Before Your Session — Client Disclaimer & Informed Consent" },
@@ -319,7 +319,7 @@ var Route$3 = createFileRoute("/disclaimer")({
 	] }),
 	component: lazyRouteComponent($$splitComponentImporter$3, "component")
 });
-var $$splitComponentImporter$2 = () => import("./privacy-B-z1jbMv.mjs");
+var $$splitComponentImporter$2 = () => import("./privacy-DKz66gNK.mjs");
 var Route$2 = createFileRoute("/privacy")({
 	head: () => ({ meta: [
 		{ title: "Privacy & Cookie Policy — Written Beyond Belief" },
@@ -338,7 +338,7 @@ var Route$2 = createFileRoute("/privacy")({
 	] }),
 	component: lazyRouteComponent($$splitComponentImporter$2, "component")
 });
-var $$splitComponentImporter$1 = () => import("./terms-Nqt1_AgY.mjs");
+var $$splitComponentImporter$1 = () => import("./terms-CkoXbLg4.mjs");
 var Route$1 = createFileRoute("/terms")({
 	head: () => ({ meta: [
 		{ title: "Terms & Conditions and Refund Policy — Written Beyond Belief" },
@@ -357,13 +357,13 @@ var Route$1 = createFileRoute("/terms")({
 	] }),
 	component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-var $$splitComponentImporter = () => import("./work-BIQ7aNmv.mjs");
+var $$splitComponentImporter = () => import("./work-DU4xaX5q.mjs");
 var Route = createFileRoute("/work")({
 	head: () => ({ meta: [
 		{ title: "The Work I Offer — Energy Healing Sessions | Written Beyond Belief" },
 		{
 			name: "description",
-			content: "Intuitively guided energy healing sessions near London Bridge. 45 minutes, £75 — space for clarity, release and deeper connection to yourself."
+			content: "Intuitively guided energy healing sessions near London Bridge. In-person from £75, online from £45."
 		},
 		{
 			property: "og:title",
@@ -371,7 +371,7 @@ var Route = createFileRoute("/work")({
 		},
 		{
 			property: "og:description",
-			content: "Intuitively guided energy healing sessions near London Bridge. 45 minutes, £75."
+			content: "Intuitively guided energy healing sessions near London Bridge."
 		}
 	] }),
 	component: lazyRouteComponent($$splitComponentImporter, "component")

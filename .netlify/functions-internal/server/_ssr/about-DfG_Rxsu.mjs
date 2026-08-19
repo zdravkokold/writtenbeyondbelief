@@ -1,7 +1,7 @@
-import { _ as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
-import { a as Wash, i as Header, n as Glyph, r as GlyphVeil, t as Footer } from "./Wash-BNmoMG0f.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/about-Dw3WQXoX.js
+import { a as Logo, i as Header, o as Wash } from "./Wash-DhRivWxj.mjs";
+import { t as Footer } from "./Footer-CNUk21xQ.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/about-DfG_Rxsu.js
 var import_jsx_runtime = require_jsx_runtime();
 var about_doors_default = "/assets/about-doors-DKv8ljUV.jpg";
 var paragraphs = [
@@ -23,54 +23,30 @@ function About() {
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Header, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("main", {
-				className: "page-enter mx-auto max-w-3xl px-6 pt-16 md:pt-24",
+				className: "page-enter mx-auto max-w-3xl px-6 pt-16 pb-8 md:pt-24",
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("header", {
-						className: "relative text-center",
+						className: "text-center",
 						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(GlyphVeil, {
-								name: "seed-of-life",
-								opacity: .08,
-								className: "-top-24 left-1/2 h-[30rem] w-[30rem] -translate-x-1/2"
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "mx-auto mb-6 block h-px w-16 bg-[var(--gold)] opacity-60" }),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Logo, { className: "mx-auto h-28 w-auto md:h-36" }),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "mx-auto mt-8 mb-2 block h-px w-16 bg-[var(--gold)] opacity-60" }),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
-								className: "font-display text-4xl text-primary md:text-6xl",
-								children: "About me"
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "mt-6 flex items-center justify-center gap-4",
-								children: [
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "hairline w-24" }),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Glyph, {
-										name: "lotus-bud",
-										opacity: .5,
-										className: "h-14 w-auto"
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "hairline w-24" })
-								]
+								className: "font-display text-3xl leading-tight text-[var(--brand-purple)] md:text-5xl",
+								children: "The Person Behind Written Beyond Belief"
 							})
 						]
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("figure", {
-						className: "mx-auto mt-14 max-w-md",
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-							src: about_doors_default,
-							alt: "Maggie sitting cross-legged in front of an ornately carved Nepalese temple door",
-							className: "feather-soft h-auto w-full object-cover",
-							loading: "lazy"
-						})
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 						className: "mt-16 space-y-8 text-center text-base leading-[2] text-muted-foreground md:text-lg",
 						children: paragraphs.map((p) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: p }, p.slice(0, 24)))
 					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "mt-20 text-center",
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-							to: "/work",
-							className: "inline-flex rounded-sm bg-primary px-9 py-4 text-xs tracking-[0.22em] text-primary-foreground uppercase transition-opacity hover:opacity-90",
-							children: "The work I offer"
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("figure", {
+						className: "mx-auto mt-20 max-w-md pb-8",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+							src: about_doors_default,
+							alt: "Maggie sitting cross-legged in front of an ornately carved Nepalese temple door",
+							className: "feather-soft h-auto w-full object-cover",
+							loading: "lazy"
 						})
 					})
 				]

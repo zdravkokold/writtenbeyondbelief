@@ -1,25 +1,36 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Wash } from "@/components/Wash";
-import { Glyph, GlyphVeil } from "@/components/Glyph";
+import { Logo } from "@/components/Logo";
+import { Glyph } from "@/components/Glyph";
+import { PageOrnaments } from "@/components/PageOrnaments";
 import doors from "@/assets/about-doors.jpg";
+import { absoluteUrl, SITE_NAME } from "@/lib/seo";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Me — Maggie | Written Beyond Belief" },
+      {
+        title: `The Person Behind Written Beyond Belief | ${SITE_NAME}`,
+      },
       {
         name: "description",
         content:
           "Maggie's journey from contemporary dance to yoga teaching and Jikochiyu healing, and the presence she brings to every session.",
       },
-      { property: "og:title", content: "About Me — Maggie | Written Beyond Belief" },
+      {
+        property: "og:title",
+        content: `The Person Behind Written Beyond Belief | ${SITE_NAME}`,
+      },
       {
         property: "og:description",
         content: "Maggie's journey from contemporary dance to yoga teaching and Jikochiyu healing.",
       },
+      { property: "og:url", content: absoluteUrl("/about") },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: absoluteUrl("/about") }],
   }),
   component: About,
 });
@@ -36,27 +47,26 @@ const paragraphs = [
 function About() {
   return (
     <div className="page-wash min-h-screen">
-      <Wash tone="pink-purple" />
-      <div className="watermark-layer" aria-hidden />
+      <Wash tone="yellow" />
+      <PageOrnaments page="about" />
       <Header />
 
-      <main className="page-enter mx-auto max-w-3xl px-6 pt-16 md:pt-24">
-        <header className="relative text-center">
-          <GlyphVeil
-            name="seed-of-life"
-            opacity={0.22}
-            className="-top-24 left-1/2 h-[30rem] w-[30rem] -translate-x-1/2"
-          />
-          <span className="mx-auto mb-6 block h-px w-16 bg-[var(--gold)] opacity-60" />
-          <h1 className="font-display text-4xl text-primary md:text-6xl">About me</h1>
-          <div className="mt-6 flex items-center justify-center gap-4">
-            <span className="hairline w-24" />
-            <Glyph name="lotus-bud" opacity={0.5} className="h-14 w-auto" />
-            <span className="hairline w-24" />
-          </div>
+      <main className="page-enter mx-auto max-w-3xl px-6 pt-16 pb-8 md:pt-24">
+        <header className="text-center">
+          <Logo feather={false} className="mx-auto h-auto w-[min(100%,36rem)] md:w-[min(100%,40rem)]" />
+          <h1 className="font-display mt-10 text-3xl leading-tight text-[var(--brand-purple)] md:text-5xl">
+            The Person Behind Written Beyond Belief
+          </h1>
+          <Glyph name="north-star" plain opacity={0.9} className="mx-auto mt-5 h-8 w-8" />
         </header>
 
-        <figure className="mx-auto mt-14 max-w-md">
+        <div className="mt-14 space-y-8 text-center text-base leading-[2] text-muted-foreground md:text-lg">
+          {paragraphs.map((p) => (
+            <p key={p.slice(0, 24)}>{p}</p>
+          ))}
+        </div>
+
+        <figure className="mx-auto mt-20 max-w-lg pb-8">
           <img
             src={doors}
             alt="Maggie sitting cross-legged in front of an ornately carved Nepalese temple door"
@@ -64,21 +74,6 @@ function About() {
             loading="lazy"
           />
         </figure>
-
-        <div className="mt-16 space-y-8 text-center text-base leading-[2] text-muted-foreground md:text-lg">
-          {paragraphs.map((p) => (
-            <p key={p.slice(0, 24)}>{p}</p>
-          ))}
-        </div>
-
-        <div className="mt-20 text-center">
-          <Link
-            to="/work"
-            className="inline-flex rounded-sm bg-primary px-9 py-4 text-xs tracking-[0.22em] text-primary-foreground uppercase transition-opacity hover:opacity-90"
-          >
-            The work I offer
-          </Link>
-        </div>
       </main>
 
       <Footer />

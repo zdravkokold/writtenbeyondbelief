@@ -32,10 +32,12 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
   --color-gold: var(--gold);
+  --color-brand-purple: var(--brand-purple);
   --color-sage: var(--sage);
   --color-sand: var(--sand);
   --color-linen: var(--linen);
   --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-script: "Great Vibes", "Segoe Script", cursive;
   --font-sans: "Karla", ui-sans-serif, system-ui, sans-serif;
 }
 
@@ -62,25 +64,36 @@
   --border: oklch(0.89 0.017 80);
   --input: oklch(0.89 0.017 80);
   --ring: oklch(0.72 0.07 76);
-  --gold: oklch(0.68 0.075 78);
+  --gold: oklch(0.72 0.09 78);
+  --brand-purple: oklch(0.36 0.12 305);
   --sage: oklch(0.56 0.038 140);
   --sand: oklch(0.9 0.028 78);
   --linen: oklch(0.955 0.014 82);
 
   --gradient-watercolour:
     radial-gradient(
-      ellipse 60% 45% at 12% 18%,
-      color-mix(in oklab, var(--sand) 55%, transparent),
+      ellipse 65% 50% at 10% 15%,
+      color-mix(in oklab, var(--sand) 72%, transparent),
+      transparent 68%
+    ),
+    radial-gradient(
+      ellipse 50% 45% at 90% 25%,
+      color-mix(in oklab, var(--gold) 32%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      ellipse 60% 40% at 75% 80%,
+      color-mix(in oklab, var(--sand) 48%, transparent),
       transparent 70%
     ),
     radial-gradient(
-      ellipse 55% 40% at 88% 72%,
-      color-mix(in oklab, var(--gold) 22%, transparent),
-      transparent 70%
+      ellipse 55% 50% at 25% 70%,
+      color-mix(in oklab, var(--gold) 18%, transparent),
+      transparent 72%
     ),
     radial-gradient(
       ellipse 70% 50% at 50% 110%,
-      color-mix(in oklab, var(--sage) 12%, transparent),
+      color-mix(in oklab, var(--sage) 16%, transparent),
       transparent 72%
     );
   --gradient-veil: linear-gradient(
@@ -259,6 +272,37 @@
   .page-enter {
     animation: none;
   }
+}
+
+/* Gold vector ornaments — black background keyed out on light pages */
+@utility glyph-vector {
+  mix-blend-mode: screen;
+}
+
+/* Header bar — warm cream field */
+@utility header-bar {
+  background-color: var(--background);
+  border-bottom: 1px solid color-mix(in oklab, var(--gold) 22%, transparent);
+}
+
+/* Home closing section — soft sage & gold wash */
+@utility closing-wash {
+  background:
+    radial-gradient(
+      ellipse 70% 60% at 12% 40%,
+      color-mix(in oklab, var(--sage) 14%, transparent),
+      transparent 68%
+    ),
+    radial-gradient(
+      ellipse 60% 55% at 88% 55%,
+      color-mix(in oklab, var(--gold) 16%, transparent),
+      transparent 65%
+    ),
+    linear-gradient(
+      180deg,
+      color-mix(in oklab, var(--background) 90%, var(--sand) 10%) 0%,
+      color-mix(in oklab, var(--linen) 85%, var(--sage) 15%) 100%
+    );
 }
 
 /* Stronger all-round feathering for portrait photos */

@@ -6,22 +6,28 @@ import { useForm, ValidationError } from "@formspree/react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Wash } from "@/components/Wash";
+import { PageOrnaments } from "@/components/PageOrnaments";
+import { SectionDivider } from "@/components/SectionDivider";
+import { absoluteUrl, SITE_NAME } from "@/lib/seo";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Written Beyond Belief" },
+      { title: `Contact — ${SITE_NAME}` },
       {
         name: "description",
         content:
           "Get in touch with Maggie to enquire about a healing session or ask a question before booking.",
       },
-      { property: "og:title", content: "Contact — Written Beyond Belief" },
+      { property: "og:title", content: `Contact — ${SITE_NAME}` },
       {
         property: "og:description",
         content: "Get in touch with Maggie to enquire about a healing session.",
       },
+      { property: "og:url", content: absoluteUrl("/contact") },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: absoluteUrl("/contact") }],
   }),
   component: Contact,
 });
@@ -63,6 +69,7 @@ function Contact() {
     return (
       <div className="page-wash min-h-screen">
         <Wash tone="yellow" />
+        <PageOrnaments page="contact" />
         <div className="watermark-layer" aria-hidden />
         <Header />
 
@@ -89,6 +96,7 @@ function Contact() {
   return (
     <div className="page-wash min-h-screen">
       <Wash tone="yellow" />
+      <PageOrnaments page="contact" />
       <div className="watermark-layer" aria-hidden />
       <Header />
 
@@ -96,11 +104,7 @@ function Contact() {
         <header className="text-center">
           <span className="mx-auto mb-6 block h-px w-16 bg-[var(--gold)] opacity-60" />
           <h1 className="font-display text-4xl text-primary md:text-6xl">Contact</h1>
-          <div className="mt-6 flex items-center justify-center gap-4">
-            <span className="hairline w-24" />
-            <span className="h-1.5 w-1.5 rounded-full bg-[var(--gold)]" />
-            <span className="hairline w-24" />
-          </div>
+          <SectionDivider />
           <p className="mt-10 leading-[1.9] text-muted-foreground">
             If you have a question, or feel called to book a session, please leave a message below.
             I read every enquiry personally and will reply with care.

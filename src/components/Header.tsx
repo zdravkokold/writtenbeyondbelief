@@ -1,71 +1,103 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { Logo } from "./Logo";
+import { Glyph, GlyphLink } from "./Glyph";
+import { Wordmark } from "./Wordmark";
 
-const links = [
-  { to: "/about", label: "About Me" },
-  { to: "/work", label: "The Work I Offer" },
-  { to: "/contact", label: "Contact" },
+const navItems = [
+  { to: "/", category: "Explore", label: "Home" },
+  { to: "/work", category: "Expand", label: "The Work I Offer" },
+  { to: "/contact", category: "Create", label: "Contact" },
 ] as const;
 
-export function Header({ overlay = false }: { overlay?: boolean }) {
+function NavDivider() {
+  return <span className="hidden h-14 w-px shrink-0 bg-[var(--gold)]/45 md:block" aria-hidden />;
+}
+
+function NavItem({
+  to,
+  category,
+  label,
+  onClick,
+}: {
+  to: string;
+  category: string;
+  label: string;
+  onClick?: () => void;
+}) {
+  return (
+    <Link
+      to={to}
+      onClick={onClick}
+      className="group flex flex-col items-center gap-1 px-3 py-1 text-center transition-opacity hover:opacity-75 sm:px-5 md:px-8"
+    >
+      <span className="font-display text-[1.1rem] leading-none tracking-[0.08em] text-[var(--brand-purple)] uppercase sm:text-[1.25rem] md:text-[1.7rem]">
+        {category}
+      </span>
+      <span className="font-display text-[0.8rem] tracking-wide text-[var(--brand-purple)] sm:text-[0.9rem] md:text-[1.1rem]">
+        {label}
+      </span>
+    </Link>
+  );
+}
+
+export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className={overlay ? "absolute inset-x-0 top-0 z-30" : "relative z-30"}>
-      <div className="relative mx-auto max-w-6xl px-6 py-6 md:py-8">
-        <div className="flex flex-col items-center gap-4">
-          <Link to="/" className="flex min-w-0 flex-col items-center gap-2">
-            {!overlay && <Logo className="h-14 w-14 shrink-0 md:h-16 md:w-16" />}
-            <span
-              className={`font-display truncate text-2xl tracking-wide md:text-3xl ${
-                overlay ? "text-white drop-shadow-md" : "text-foreground"
-              }`}
-            >
-              writtenbeyondbelief.com
-            </span>
-          </Link>
+    <header className="header-bar relative z-30">
+      <div className="mx-auto max-w-[1440px] px-5 py-5 md:px-10 md:py-6">
+        <div className="grid grid-cols-[1fr_auto] items-center gap-4 md:grid-cols-[1fr_auto_1fr]">
+          <div className="justify-self-start">
+            <Wordmark />
+          </div>
 
-          <nav className="hidden items-center justify-center gap-12 md:flex">
-            {links.map((l) => (
-              <Link
-                key={l.to}
-                to={l.to}
-                className={`font-display text-lg tracking-wide transition-opacity hover:opacity-70 ${
-                  overlay ? "text-white drop-shadow-md" : "text-foreground"
-                }`}
-                activeProps={{ className: "opacity-70" }}
-              >
-                {l.label}
-              </Link>
+          <nav className="hidden items-center justify-center md:flex" aria-label="Primary">
+            {navItems.map((item, i) => (
+              <div key={item.to} className="flex items-center">
+                {i > 0 && <NavDivider />}
+                <NavItem {...item} />
+              </div>
             ))}
           </nav>
-        </div>
 
-        <button
-          type="button"
-          aria-label={open ? "Close menu" : "Open menu"}
-          onClick={() => setOpen((v) => !v)}
-          className={`absolute top-6 right-6 shrink-0 md:hidden ${overlay ? "text-white" : "text-foreground"}`}
-        >
-          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
+          <div className="hidden justify-self-end md:flex">
+            <GlyphLink
+              name="seed-of-life"
+              to="/about"
+              label="The Person Behind Written Beyond Belief"
+              className="h-14 w-14 sm:h-16 sm:w-16 md:h-[5.5rem] md:w-[5.5rem]"
+              opacity={1}
+              plain
+            />
+          </div>
+
+          <button
+            type="button"
+            aria-label={open ? "Close menu" : "Open menu"}
+            onClick={() => setOpen((v) => !v)}
+            className="justify-self-end text-[var(--brand-purple)] md:hidden"
+          >
+            {open ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
+          </button>
+        </div>
       </div>
 
       {open && (
-        <div className="mx-6 mb-4 rounded-lg bg-card/95 px-6 py-5 shadow-[var(--shadow-soft)] backdrop-blur md:hidden">
-          <nav className="flex flex-col gap-4">
-            {links.map((l) => (
-              <Link
-                key={l.to}
-                to={l.to}
-                onClick={() => setOpen(false)}
-                className="font-display text-xl text-foreground"
-              >
-                {l.label}
-              </Link>
+        <div className="border-t border-[var(--gold)]/20 bg-[var(--background)] px-6 py-6 md:hidden">
+          <nav className="flex flex-col items-center gap-6" aria-label="Mobile">
+            {navItems.map((item) => (
+              <NavItem key={item.to} {...item} onClick={() => setOpen(false)} />
             ))}
+            <span className="hairline w-24" />
+            <Link
+              to="/about"
+              onClick={() => setOpen(false)}
+              className="flex items-center"
+              aria-label="The Person Behind Written Beyond Belief"
+            >
+              <Glyph name="seed-of-life" opacity={1} plain className="h-16 w-16" />
+            </Link>
           </nav>
         </div>
       )}
