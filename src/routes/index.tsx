@@ -86,15 +86,7 @@ function Home() {
                     Have you ever wondered what holds you back from creating from the wisdom within
                     you?
                   </p>
-
-                  <div className="flex items-center justify-center gap-3 md:my-2">
-                    <span className="hairline w-24 md:w-32" />
-                    <span className="text-base leading-none text-[var(--gold)]" aria-hidden>
-                      ♥
-                    </span>
-                    <span className="hairline w-24 md:w-32" />
-                  </div>
-
+                  <SectionDivider />
                   <p className="text-[1.2rem] leading-snug text-white/95 drop-shadow-[0_2px_14px_rgba(0,0,0,0.4)] md:text-[1.45rem]">
                     What would it feel to remember the path that is truly yours?
                   </p>
@@ -113,7 +105,7 @@ function Home() {
       </section>
 
       {/* My Mission — starts after the wave; same cream fill as the SVG */}
-      <section className="relative bg-[var(--background)] px-6 pt-14 pb-20 md:pt-20 md:pb-28">
+      <section className="relative px-6 pt-14 pb-20 md:pt-20 md:pb-28">
         <div className="relative mx-auto max-w-3xl text-center">
           <h2 className="font-display text-4xl text-primary md:text-6xl">My Mission, My Path</h2>
           <SectionDivider />

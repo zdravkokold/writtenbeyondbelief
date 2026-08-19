@@ -13,7 +13,7 @@ export function WaveTransition() {
       >
         <path
           d="M0,64 C180,108 360,20 540,56 C720,92 900,16 1080,60 C1260,104 1380,36 1440,52 L1440,120 L0,120 Z"
-          fill="var(--background)"
+          fill="#F8F1E5"
         />
       </svg>
     </div>

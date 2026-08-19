@@ -21,7 +21,7 @@ export function PageOrnaments({ page = "home" }: { page?: keyof typeof pageGlyph
       <GlyphVeil
         name={left}
         opacity={0.6}
-        className="top-[12%] left-3 h-28 w-28 sm:left-5 sm:h-36 sm:w-36 md:left-8 md:h-48 md:w-48 lg:left-12 lg:h-60 lg:w-60 xl:left-16 xl:h-72 xl:w-72"
+        className="top-[55%] left-3 h-28 w-28 sm:left-5 sm:h-36 sm:w-36 md:left-8 md:h-48 md:w-48 lg:left-12 lg:h-60 lg:w-60 xl:left-16 xl:h-72 xl:w-72"
       />
       {/* Right ornament — lower area */}
       <GlyphVeil

@@ -1,8 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { Glyph, GlyphLink } from "./Glyph";
 import { Wordmark } from "./Wordmark";
+import { Logo } from "./Logo";
 
 const navItems = [
   { to: "/", category: "Explore", label: "Home" },
@@ -62,14 +62,7 @@ export function Header() {
           </nav>
 
           <div className="hidden justify-self-end md:flex">
-            <GlyphLink
-              name="seed-of-life"
-              to="/about"
-              label="The Person Behind Written Beyond Belief"
-              className="h-14 w-14 sm:h-16 sm:w-16 md:h-[5.5rem] md:w-[5.5rem]"
-              opacity={1}
-              plain
-            />
+            <Logo className="h-20 w-20" href="/about"/>
           </div>
 
           <button
@@ -96,7 +89,7 @@ export function Header() {
               className="flex items-center"
               aria-label="The Person Behind Written Beyond Belief"
             >
-              <Glyph name="seed-of-life" opacity={1} plain className="h-16 w-16" />
+              <Logo className="h-20 w-20" href="/about"/>
             </Link>
           </nav>
         </div>
