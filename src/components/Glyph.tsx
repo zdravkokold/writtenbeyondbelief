@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import northStar from "@/assets/north_star.svg";
+import northStar from "@/assets/North_star.svg";
 import seedOfLife from "@/assets/seed_of_life.svg";
 import lotusBud from "@/assets/lotus_bud.svg";
 import lotus from "@/assets/lotus.svg";
