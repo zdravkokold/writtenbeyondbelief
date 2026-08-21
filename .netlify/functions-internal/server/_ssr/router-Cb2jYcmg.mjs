@@ -181,7 +181,7 @@ var Route$7 = createRootRouteWithContext()({
 			{ title: "Written Beyond Belief — Energy Healing with Maggie" },
 			{
 				name: "description",
-				content: "Intuitively guided energy healing sessions in London. Explore, expand and create from the wisdom within you."
+				content: "Intuitively guided energy healing sessions in London. Explore, expand and create through the wisdom and power within you."
 			},
 			{
 				name: "author",
@@ -249,7 +249,7 @@ var Route$6 = createFileRoute("/")({
 		{ title: "Written Beyond Belief — Energy Healing with Maggie" },
 		{
 			name: "description",
-			content: "Intuitively guided energy healing sessions in London. Explore, expand and create from the wisdom within you."
+			content: "Intuitively guided energy healing sessions in London. Explore, expand and create through the wisdom and power within you."
 		},
 		{
 			property: "og:title",
@@ -257,7 +257,7 @@ var Route$6 = createFileRoute("/")({
 		},
 		{
 			property: "og:description",
-			content: "Intuitively guided energy healing sessions in London. Explore, expand and create from the wisdom within you."
+			content: "Intuitively guided energy healing sessions in London. Explore, expand and create through the wisdom and power within you."
 		}
 	] }),
 	component: lazyRouteComponent($$splitComponentImporter$6, "component")

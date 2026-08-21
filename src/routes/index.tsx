@@ -83,12 +83,12 @@ function Home() {
               <div className="rise-in mx-auto flex h-full max-w-md flex-col justify-center px-2 py-8 pb-32 text-center md:mr-[3%] md:ml-auto md:block md:h-auto md:max-w-[34rem] md:px-0 md:py-0 md:pb-28">
                 <div className="space-y-5 font-display text-[1.6rem] leading-[1.28] text-white drop-shadow-[0_2px_18px_rgba(0,0,0,0.4)] md:text-[2rem]">
                   <p>
-                    Have you ever wondered what holds you back from creating from the wisdom within
+                    Have you ever wondered what holds you back from creating through the wisdom and power within
                     you?
                   </p>
                   <SectionDivider />
                   <p className="text-[1.2rem] leading-snug text-white/95 drop-shadow-[0_2px_14px_rgba(0,0,0,0.4)] md:text-[1.45rem]">
-                    What would it feel to remember the path that is truly yours?
+                    What would it feel like to remember the path that is truly yours?
                   </p>
 
                   <p className="text-[1.15rem] leading-snug text-white/92 drop-shadow-[0_2px_14px_rgba(0,0,0,0.4)] md:text-[1.35rem]">

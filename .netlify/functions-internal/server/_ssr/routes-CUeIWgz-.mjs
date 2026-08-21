@@ -152,8 +152,8 @@ function Home() {
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							className: "rise-in space-y-5 font-display text-[1.25rem] leading-[1.38] text-[var(--brand-purple)] md:text-[1.45rem] lg:text-[1.55rem]",
 							children: [
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Have you ever wondered what holds you back from creating from the wisdom within you?" }),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "What would it feel to remember the path that is truly yours?" }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Have you ever wondered what holds you back from creating through the wisdom and power within you?" }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "What would it feel like to remember the path that is truly yours?" }),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Let us journey together into the space where The Self is explored beyond existing beliefs." })
 							]
 						})

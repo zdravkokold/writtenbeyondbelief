@@ -61,13 +61,13 @@ function Work() {
           </p>
           <p>
             Together, we explore how you are feeling physically, mentally, emotionally and
-            energetically. Depending on what arises, I support you using different energy healing
+            energetically. Depending on what arises, I support you with different energy healing
             techniques.
           </p>
           <p>
             The intention behind each session is to create space for curiosity, openness and
             transformation — to explore beyond beliefs, discover the possibilities beyond them, step
-            into your power and ignite creative flow for yourself and the world.
+            into your power and ignite creative flow within yourself and into the world.
           </p>
         </div>
 

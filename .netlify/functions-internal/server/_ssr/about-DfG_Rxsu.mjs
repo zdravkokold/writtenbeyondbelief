@@ -6,10 +6,10 @@ var import_jsx_runtime = require_jsx_runtime();
 var about_doors_default = "/assets/about-doors-DKv8ljUV.jpg";
 var paragraphs = [
 	"Hey, I'm Maggie, and I'm deeply grateful for your presence here. I would love to share a little of my journey with you. If something within these words resonates, perhaps our paths are meant to meet.",
-	"I discovered Contemporary Dance in childhood and continued this journey from the age of five till I was seventeen. During those years, I experienced movement as a powerful way to express, release and transform.",
+	"I discovered Contemporary Dance in childhood and continued this journey from the age of five untill I was seventeen. During those years, I experienced movement as a powerful way to express, release and transform.",
 	"From my love of movement, alongside inner enquiry supported by daily reflection and journaling, my path into Yoga naturally unfolded. In 2021, I felt called to become a Yoga Teacher, and that same year I completed the 200-hour yoga teacher training.",
-	"My practice and teachings are rooted in an understanding of Yoga as a doorway to subtle discoveries about ourselves, that arise within us while we move, breathe and listen to the different layers of The Self.",
-	"A deeper exploration of breath and energy led me to study with Yumiko Asakura, a spiritual teacher and far descendent of Japanese Samurai linage. In July 2025, I completed a two-years course on her self-created healing methods, Jikochiyu.",
+	"My practice and teachings are rooted in an understanding of Yoga as a doorway to subtle discoveries about ourselves that arise within us while we move, breathe and listen to the different layers of The Self.",
+	"A deeper exploration of breath and energy led me to study with Yumiko Asakura, a spiritual teacher and far descendant of Japanese Samurai lineage. In July 2025, I completed a two-years course in her self-created healing methods, Jikochiyu.",
 	"As a healer, my work is guided by acknowledgement, acceptance and transformation. I hold a space for others to reconnect with themselves, listen inwardly and heal through the wisdom that already lives within."
 ];
 function About() {

@@ -67,8 +67,8 @@ function Work() {
 								className: "relative mt-12 space-y-8 text-center text-base leading-[2] text-[var(--brand-purple)]/85 md:text-lg",
 								children: [
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Each healing session is intuitively guided and shaped around what you need in the moment." }),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Together, we explore how you are feeling physically, mentally, emotionally and energetically. Depending on what arises, I support you using different energy healing techniques." }),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "The intention behind each session is to create space for curiosity, openness and transformation — to explore beyond beliefs, discover the possibilities beyond them, step into your power and ignite creative flow for yourself and the world." })
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Together, we explore how you are feeling physically, mentally, emotionally and energetically. Depending on what arises, I support you with different energy healing techniques." }),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "The intention behind each session is to create space for curiosity, openness and transformation — to explore beyond beliefs, discover the possibilities beyond them, step into your power and ignite creative flow within yourself and into the world." })
 								]
 							})
 						]
