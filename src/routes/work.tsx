@@ -79,7 +79,20 @@ function Work() {
           <ul className="mx-auto max-w-2xl space-y-5">
             {creates.map((item) => (
               <li key={item} className="flex gap-4 leading-[1.9] text-muted-foreground">
-                <span className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--gold)]" />
+                <span
+                  aria-hidden
+                  className="mt-1.5 h-5 w-5 shrink-0 bg-[var(--gold)]"
+                  style={{
+                    WebkitMaskImage: `url(${starBullet})`,
+                    maskImage: `url(${starBullet})`,
+                    WebkitMaskRepeat: "no-repeat",
+                    maskRepeat: "no-repeat",
+                    WebkitMaskPosition: "center",
+                    maskPosition: "center",
+                    WebkitMaskSize: "contain",
+                    maskSize: "contain",
+                  }}
+                />
                 <span>{item}</span>
               </li>
             ))}
