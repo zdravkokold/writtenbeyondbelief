@@ -66,11 +66,11 @@ function About() {
           ))}
         </div>
 
-        <figure className="mx-auto mt-20 max-w-lg pb-8">
+        <figure className="mx-auto mt-20 w-[min(100%,20rem)] pb-8">
           <img
             src={doors}
             alt="Maggie sitting cross-legged in front of an ornately carved Nepalese temple door"
-            className="feather-soft h-auto w-full object-cover"
+            className="aspect-square w-full rounded-sm object-cover"
             loading="lazy"
           />
         </figure>
