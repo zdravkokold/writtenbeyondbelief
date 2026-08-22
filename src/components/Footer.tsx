@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { Instagram } from "lucide-react";
 import { Logo } from "./Logo";
 import { Glyph } from "./Glyph";
 
@@ -40,6 +41,17 @@ export function Footer() {
           className="font-display text-lg tracking-wide text-foreground transition-opacity hover:opacity-70"
         >
           Maggie@writtenbeyondbelief.com
+        </a>
+
+        <a
+          href="https://instagram.com/writtenbeyondbelief"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Written Beyond Belief on Instagram"
+          className="flex items-center gap-2 text-sm tracking-wide text-muted-foreground transition-colors hover:text-foreground"
+        >
+          <Instagram className="h-5 w-5 text-[var(--gold)]" aria-hidden />
+          @writtenbeyondbelief
         </a>
 
         <p className="text-xs text-muted-foreground">
