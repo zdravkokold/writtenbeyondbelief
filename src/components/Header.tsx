@@ -32,9 +32,11 @@ function NavItem({
       onClick={onClick}
       className="group flex flex-col items-center gap-1 px-3 py-1 text-center transition-opacity hover:opacity-75 sm:px-5 md:px-8"
     >
-      <span className="font-display text-[1.1rem] leading-none tracking-[0.08em] text-[var(--brand-purple)] uppercase sm:text-[1.25rem] md:text-[1.7rem]">
-        {category}
-      </span>
+      {category && (
+        <span className="font-display text-[1.1rem] leading-none tracking-[0.08em] text-[var(--brand-purple)] uppercase sm:text-[1.25rem] md:text-[1.7rem]">
+          {category}
+        </span>
+      )}
       <span className="font-display text-[0.8rem] tracking-wide text-[var(--brand-purple)] sm:text-[0.9rem] md:text-[1.1rem]">
         {label}
       </span>
