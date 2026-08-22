@@ -67,13 +67,21 @@ function About() {
         </div>
 
         <figure className="mx-auto mt-20 w-[min(100%,20rem)] pb-8">
-          <img
-            src={doors}
-            alt="Maggie sitting cross-legged in front of an ornately carved Nepalese temple door"
-            className="w-full h-full object-cover rounded-none"
-            loading="lazy"
-          />
-        </figure>
+  <img
+    src={doors}
+    alt="Maggie sitting cross-legged in front of an ornately carved Nepalese temple door"
+    className="aspect-[4/5] w-full object-cover object-bottom"
+    loading="lazy"
+    style={{
+      WebkitMaskImage:
+        "linear-gradient(to bottom, transparent 0%, black 25%, black 92%, transparent 100%), linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)",
+      maskImage:
+        "linear-gradient(to bottom, transparent 0%, black 25%, black 92%, transparent 100%), linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)",
+      WebkitMaskComposite: "intersect",
+      maskComposite: "intersect",
+    }}
+  />
+</figure>
       </main>
 
       <Footer />
