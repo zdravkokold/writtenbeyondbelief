@@ -72,7 +72,7 @@ function Work() {
         </div>
 
         <section className="mt-20">
-          <h2 className="font-display text-center text-3xl text-primary md:text-4xl">
+          <h2 className="font-display text-center text-2xl text-primary md:text-4xl">
             What We Can Create
           </h2>
           <span className="hairline mx-auto mt-6 mb-10 block w-32" />

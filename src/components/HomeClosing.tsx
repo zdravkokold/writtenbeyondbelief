@@ -18,7 +18,7 @@ export function HomeClosing() {
         <p className="font-sans text-xs tracking-[0.32em] text-[var(--brand-purple)] uppercase md:text-sm">
           Explore • Expand • Create
         </p>
-        <p className="font-display mt-5 text-2xl text-primary italic md:text-3xl">
+        <p className="font-display mt-5 text-2xl text-[var(--brand-purple)] italic md:text-3xl">
           A journey back to yourself. A path beyond belief.
         </p>
 

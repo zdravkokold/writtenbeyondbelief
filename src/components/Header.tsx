@@ -8,6 +8,7 @@ const navItems = [
   { to: "/", category: "Explore", label: "Home" },
   { to: "/work", category: "Expand", label: "The Work I Offer" },
   { to: "/contact", category: "Create", label: "Contact" },
+  { to: "/about", label: "About Me" },
 ] as const;
 
 function NavDivider() {

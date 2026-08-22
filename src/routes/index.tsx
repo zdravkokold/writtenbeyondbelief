@@ -68,7 +68,7 @@ function Home() {
           <img
             src={hero}
             alt="A woman standing on a clifftop above the sea with her arms open to the sky"
-            className="h-full w-full object-cover object-[48%_center]"
+            className="h-full w-full object-cover object-[48%_center] opacity-77 md:opacity-100"
           />
           <div
             className="pointer-events-none absolute inset-0"
@@ -79,26 +79,35 @@ function Home() {
           />
 
           <div className="absolute inset-0 flex items-center">
-            <div className="mx-auto h-full w-full max-w-[1440px] px-6 md:h-auto">
-              <div className="rise-in mx-auto flex h-full max-w-md flex-col justify-center px-2 py-8 pb-32 text-center md:mr-[3%] md:ml-auto md:block md:h-auto md:max-w-[34rem] md:px-0 md:py-0 md:pb-28">
-                <div className="space-y-5 font-display text-[1.6rem] leading-[1.28] text-white drop-shadow-[0_2px_18px_rgba(0,0,0,0.4)] md:text-[2rem]">
-                  <p>
-                    Have you ever wondered what holds you back from creating through the wisdom and power within
-                    you?
-                  </p>
-                  <SectionDivider />
-                  <p className="text-[1.2rem] leading-snug text-white/95 drop-shadow-[0_2px_14px_rgba(0,0,0,0.4)] md:text-[1.45rem]">
-                    What would it feel like to remember the path that is truly yours?
-                  </p>
+  <div className="mx-auto h-full w-full max-w-[1440px] px-6 md:h-auto">
+    <div className="rise-in mx-auto flex h-full max-w-md flex-col justify-center px-2 py-8 pb-32 text-center md:mr-[3%] md:ml-auto md:block md:h-auto md:max-w-[34rem] md:px-0 md:py-0 md:pb-28">
+      
+      {/* Removed drop-shadow from parent div to keep desktop clean */}
+      <div className="space-y-5 font-display text-[1.6rem] leading-[1.28] text-white md:text-[2rem]">
+        
+        {/* Paragraph 1 */}
+        <p className="leading-snug text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.90)] md:drop-shadow-none">
+          Have you ever wondered what holds you back from creating through the wisdom and power within
+          you?
+        </p>
+        
+        <SectionDivider />
+        
+        {/* Paragraph 2 */}
+        <p className="text-[1.2rem] leading-snug text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.90)] md:text-[1.45rem] md:drop-shadow-none">
+          What would it feel like to remember the path that is truly yours?
+        </p>
 
-                  <p className="text-[1.15rem] leading-snug text-white/92 drop-shadow-[0_2px_14px_rgba(0,0,0,0.4)] md:text-[1.35rem]">
-                    Let us journey together into the space where The Self is explored beyond
-                    existing beliefs.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+        {/* Paragraph 3 */}
+        <p className="text-[1.15rem] leading-snug text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.90)] md:text-[1.35rem] md:drop-shadow-none">
+          Let us journey together into the space where The Self is explored beyond
+          existing beliefs.
+        </p>
+        
+      </div>
+    </div>
+  </div>
+</div>
 
           <WaveTransition />
         </div>
