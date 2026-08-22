@@ -53,7 +53,7 @@ function About() {
 
       <main className="page-enter mx-auto max-w-3xl px-6 pt-16 pb-8 md:pt-24">
         <header className="text-center">
-          <Logo feather={false} className="mx-auto h-auto w-[min(100%,36rem)] md:w-[min(100%,40rem)]" />
+          <Logo feather={false} className="mx-auto h-auto w-[min(100%,28rem)] md:w-[min(100%,31rem)]" />
           <h1 className="font-display mt-10 text-3xl leading-tight text-[var(--brand-purple)] md:text-5xl">
             The Person Behind Written Beyond Belief
           </h1>
