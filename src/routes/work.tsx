@@ -82,7 +82,7 @@ function Work() {
               <li key={item} className="flex gap-4 leading-[1.9] text-muted-foreground">
                 <span
                   aria-hidden
-                  className="mt-1.5 h-5 w-5 shrink-0 bg-[var(--gold)]"
+                  className="mt-0 h-7 w-7 shrink-0 bg-[var(--gold)]"
                   style={{
                     WebkitMaskImage: `url("${starBullet}")`,
                     maskImage: `url("${starBullet}")`,
