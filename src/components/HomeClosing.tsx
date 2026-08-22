@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Glyph } from "./Glyph";
+import { Instagram } from "lucide-react";
 
 const legal = [
   { to: "/privacy", label: "Privacy & Cookie Policy" },
@@ -7,7 +8,7 @@ const legal = [
   { to: "/disclaimer", label: "Client Disclaimer" },
 ] as const;
 
-export function HomeClosing() {
+export function HomeClosing() { 
   return (
     <section className="relative px-6 pt-8 pb-16 text-center md:pb-20">
       <div className="hairline mx-auto max-w-4xl" />
@@ -33,6 +34,18 @@ export function HomeClosing() {
             </Link>
           ))}
         </nav>
+        <div className="flex max-w-4xl flex-col items-center gap-8 text-center mt-8">
+          <a href="https://instagram.com/writtenbeyondbelief"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Written Beyond Belief on Instagram"
+          className="flex items-center gap-2 text-sm tracking-wide text-muted-foreground transition-colors hover:text-foreground"
+        >
+          <Instagram className="h-5 w-5 text-[var(--gold)]" aria-hidden />
+          @writtenbeyondbelief
+        </a>
+          </div>
+        
 
         <p className="mt-10 text-xs text-muted-foreground/70">
           © {new Date().getFullYear()} Written Beyond Belief. All rights reserved.
