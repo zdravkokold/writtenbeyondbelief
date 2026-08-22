@@ -5,7 +5,7 @@ import { Wash } from "@/components/Wash";
 import { PageOrnaments } from "@/components/PageOrnaments";
 import { SectionDivider } from "@/components/SectionDivider";
 import { absoluteUrl, SITE_NAME } from "@/lib/seo";
-import starBullet from "@/assets/star bulletpoint.svg";
+import starBullet from "@/assets/star-bulletpoint.svg";
 
 export const Route = createFileRoute("/work")({
   head: () => ({
@@ -84,8 +84,8 @@ function Work() {
                   aria-hidden
                   className="mt-1.5 h-5 w-5 shrink-0 bg-[var(--gold)]"
                   style={{
-                    WebkitMaskImage: `url(${starBullet})`,
-                    maskImage: `url(${starBullet})`,
+                    WebkitMaskImage: `url("${starBullet}")`,
+                    maskImage: `url("${starBullet}")`,
                     WebkitMaskRepeat: "no-repeat",
                     maskRepeat: "no-repeat",
                     WebkitMaskPosition: "center",
