@@ -13,7 +13,7 @@ const pageGlyphs: Record<string, { left: GlyphName; right: GlyphName }> = {
  * Visible on all screens including mobile (smaller on phones).
  */
 export function PageOrnaments({ page = "home" }: { page?: keyof typeof pageGlyphs }) {
-  const { left, right } = pageGlyphs[page] ?? pageGlyphs.home;
+  const { left, right } = pageGlyphs[page] ?? pageGlyphs["home"]!;
 
   return (
     <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden" aria-hidden>
