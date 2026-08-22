@@ -5,6 +5,7 @@ import { Wash } from "@/components/Wash";
 import { PageOrnaments } from "@/components/PageOrnaments";
 import { SectionDivider } from "@/components/SectionDivider";
 import { absoluteUrl, SITE_NAME } from "@/lib/seo";
+import starBullet from "@/assets/star bulletpoint.svg";
 
 export const Route = createFileRoute("/work")({
   head: () => ({
