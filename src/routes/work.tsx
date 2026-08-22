@@ -84,6 +84,8 @@ function Work() {
                   aria-hidden
                   className="mt-0 h-7 w-7 shrink-0 bg-[var(--gold)]"
                   style={{
+                    marginTop: "calc((1.9em - 1.75rem) / 2)",
+
                     WebkitMaskImage: `url("${starBullet}")`,
                     maskImage: `url("${starBullet}")`,
                     WebkitMaskRepeat: "no-repeat",
