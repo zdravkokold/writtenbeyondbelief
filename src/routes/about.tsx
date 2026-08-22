@@ -70,7 +70,7 @@ function About() {
           <img
             src={doors}
             alt="Maggie sitting cross-legged in front of an ornately carved Nepalese temple door"
-            className="feather-soft aspect-[4/5] w-full object-cover"
+            className="feather-dissolve aspect-[4/5] w-full object-cover"
             loading="lazy"
           />
         </figure>
