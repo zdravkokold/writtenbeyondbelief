@@ -4,7 +4,7 @@ export function Wordmark({ compact = false }: { compact?: boolean }) {
   return (
     <Link
       to="/"
-      className="flex min-w-0 flex-col items-center leading-none ml-[26vw] sm:ml-0"
+      className="flex min-w-0 flex-col items-center leading-none ml-[24vw] sm:ml-0"
       aria-label="Written Beyond Belief — home"
     >
       <span
