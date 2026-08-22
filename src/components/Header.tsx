@@ -22,7 +22,7 @@ function NavItem({
   onClick,
 }: {
   to: string;
-  category: string;
+  category?: string;
   label: string;
   onClick?: () => void;
 }) {
