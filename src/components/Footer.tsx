@@ -42,6 +42,17 @@ export function Footer() {
           Maggie@writtenbeyondbelief.com
         </a>
 
+        <a
+          href="https://instagram.com/writtenbeyondbelief"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Written Beyond Belief on Instagram"
+          className="flex items-center gap-2 text-sm tracking-wide text-muted-foreground transition-colors hover:text-foreground"
+        >
+          <Instagram className="h-5 w-5 text-[var(--gold)]" aria-hidden />
+          @writtenbeyondbelief
+        </a>
+
         <p className="text-xs text-muted-foreground">
           © {new Date().getFullYear()} Written Beyond Belief. All rights reserved.
         </p>
