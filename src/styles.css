@@ -2,6 +2,14 @@
 @source "../src";
 @import "tw-animate-css";
 
+@font-face {
+  font-family: 'Rastanty Cortez';
+  src: url('/fonts/Rastanty-Cortez-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -37,7 +45,7 @@
   --color-sand: var(--sand);
   --color-linen: var(--linen);
   --font-display: "Cormorant Garamond", Georgia, serif;
-  --font-script: "Rastanti Cortez", "Sacramento", "Great Vibes", "Segoe Script", cursive;
+  --font-script: "Rastanty Cortez", Dancing Script, cursive;
   --font-sans: "Karla", ui-sans-serif, system-ui, sans-serif;
 }
 

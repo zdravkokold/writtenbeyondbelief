@@ -8,12 +8,12 @@ export function Wordmark({ compact = false }: { compact?: boolean }) {
       aria-label="Written Beyond Belief — home"
     >
       <span
-        className={`font-[family-name:var(--font-script)] text-[var(--brand-purple)] ${
-          compact ? "text-[1.85rem]" : "text-[2.15rem] md:text-[2.65rem]"
-        }`}
-      >
-        written
-      </span>
+  className={`font-[family-name:var(--font-script)] text-[var(--brand-purple)] inline-block leading-[0.7] -mb-1 ${
+    compact ? "text-[2.2rem]" : "text-[2.6rem] md:text-[3.2rem]"
+  }`}
+>
+  written
+</span>
       <span
         className={`mt-0.5 font-display font-semibold tracking-[0.12em] text-[var(--gold)] uppercase ${
           compact ? "text-[0.82rem]" : "text-[0.95rem] md:text-[1.15rem]"
