@@ -7,7 +7,9 @@ import { WaveTransition } from "@/components/WaveTransition";
 import { HomeClosing } from "@/components/HomeClosing";
 import { PageOrnaments } from "@/components/PageOrnaments";
 import { SectionDivider } from "@/components/SectionDivider";
+import { CampaignModal, type CampaignModalConfig } from "@/components/CampaignModal";
 import { absoluteUrl, defaultDescription, defaultOgDescription, SITE_NAME } from "@/lib/seo";
+import freeIntroSessionsPoster from "@/assets/free-intro-sessions-october-2026.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -54,9 +56,21 @@ const pillars = [
   },
 ];
 
+// For a future campaign, replace the image and dates below. Times are ISO dates;
+// the current end time is 09:00 on Monday, 26 October in Sofia (UTC+02:00).
+const freeIntroSessionsCampaign: CampaignModalConfig = {
+  id: "free-intro-sessions-october-2026",
+  image: freeIntroSessionsPoster,
+  imageAlt:
+    "Free online introductory sessions: 25 minutes, available this week. Email Maggie to reserve a spot.",
+  startsAt: "2026-10-19T00:00:00+03:00",
+  endsAt: "2026-10-26T09:00:00+02:00",
+};
+
 function Home() {
   return (
     <div className="page-wash min-h-screen">
+      <CampaignModal campaign={freeIntroSessionsCampaign} />
       <Wash tone="blue" secondTone="blue-yellow" />
       <PageOrnaments page="home" />
 
@@ -79,35 +93,32 @@ function Home() {
           />
 
           <div className="absolute inset-0 flex items-center">
-  <div className="mx-auto h-full w-full max-w-[1440px] px-6 md:h-auto">
-    <div className="rise-in mx-auto flex h-full max-w-md flex-col justify-center px-2 py-8 pb-32 text-center md:mr-[3%] md:ml-auto md:block md:h-auto md:max-w-[34rem] md:px-0 md:py-0 md:pb-28">
-      
-      {/* Removed drop-shadow from parent div to keep desktop clean */}
-      <div className="space-y-5 font-display text-[1.6rem] leading-[1.28] text-white md:text-[2rem]">
-        
-        {/* Paragraph 1 */}
-        <p className="leading-snug text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.90)] md:drop-shadow-none">
-          Have you ever wondered what holds you back from creating through the wisdom and power within
-          you?
-        </p>
-        
-        <SectionDivider />
-        
-        {/* Paragraph 2 */}
-        <p className="text-[1.2rem] leading-snug text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.90)] md:text-[1.45rem] md:drop-shadow-none">
-          What would it feel like to remember the path that is truly yours?
-        </p>
+            <div className="mx-auto h-full w-full max-w-[1440px] px-6 md:h-auto">
+              <div className="rise-in mx-auto flex h-full max-w-md flex-col justify-center px-2 py-8 pb-32 text-center md:mr-[3%] md:ml-auto md:block md:h-auto md:max-w-[34rem] md:px-0 md:py-0 md:pb-28">
+                {/* Removed drop-shadow from parent div to keep desktop clean */}
+                <div className="space-y-5 font-display text-[1.6rem] leading-[1.28] text-white md:text-[2rem]">
+                  {/* Paragraph 1 */}
+                  <p className="leading-snug text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.90)] md:drop-shadow-none">
+                    Have you ever wondered what holds you back from creating through the wisdom and
+                    power within you?
+                  </p>
 
-        {/* Paragraph 3 */}
-        <p className="text-[1.15rem] leading-snug text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.90)] md:text-[1.35rem] md:drop-shadow-none">
-          Let us journey together into the space where The Self is explored beyond
-          existing beliefs.
-        </p>
-        
-      </div>
-    </div>
-  </div>
-</div>
+                  <SectionDivider />
+
+                  {/* Paragraph 2 */}
+                  <p className="text-[1.2rem] leading-snug text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.90)] md:text-[1.45rem] md:drop-shadow-none">
+                    What would it feel like to remember the path that is truly yours?
+                  </p>
+
+                  {/* Paragraph 3 */}
+                  <p className="text-[1.15rem] leading-snug text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.90)] md:text-[1.35rem] md:drop-shadow-none">
+                    Let us journey together into the space where The Self is explored beyond
+                    existing beliefs.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <WaveTransition />
         </div>
