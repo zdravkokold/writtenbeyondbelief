@@ -21,12 +21,10 @@ function isCampaignActive({ startsAt, endsAt }: CampaignModalConfig, now = Date.
  */
 export function CampaignModal({ campaign }: { campaign: CampaignModalConfig }) {
   const [isOpen, setIsOpen] = useState(false);
-  const storageKey = `wbb-campaign-dismissed:${campaign.id}`;
 
   useEffect(() => {
     const updateVisibility = () => {
-      const dismissed = window.localStorage.getItem(storageKey) === "true";
-      setIsOpen(isCampaignActive(campaign) && !dismissed);
+      setIsOpen(isCampaignActive(campaign));
     };
 
     updateVisibility();
@@ -35,7 +33,7 @@ export function CampaignModal({ campaign }: { campaign: CampaignModalConfig }) {
       Math.max(0, new Date(campaign.endsAt).getTime() - Date.now()),
     );
     return () => window.clearTimeout(timeout);
-  }, [campaign, storageKey]);
+  }, [campaign]);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -47,7 +45,6 @@ export function CampaignModal({ campaign }: { campaign: CampaignModalConfig }) {
   });
 
   const dismiss = () => {
-    window.localStorage.setItem(storageKey, "true");
     setIsOpen(false);
   };
 
