@@ -8,6 +8,7 @@ import { Footer } from "@/components/Footer";
 import { Wash } from "@/components/Wash";
 import { PageOrnaments } from "@/components/PageOrnaments";
 import { SectionDivider } from "@/components/SectionDivider";
+import { FORMSPREE_FORM_ID } from "@/lib/formspree";
 import { absoluteUrl, SITE_NAME } from "@/lib/seo";
 
 export const Route = createFileRoute("/contact")({
@@ -33,7 +34,6 @@ export const Route = createFileRoute("/contact")({
 });
 
 const EMAIL = "Maggie@writtenbeyondbelief.com";
-const FORMSPREE_ID = "mljrbqol";
 
 const schema = z.object({
   name: z.string().trim().min(1, "Please share your name").max(100),
@@ -43,7 +43,7 @@ const schema = z.object({
 });
 
 function Contact() {
-  const [state, handleSubmit] = useForm(FORMSPREE_ID);
+  const [state, handleSubmit] = useForm(FORMSPREE_FORM_ID);
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {

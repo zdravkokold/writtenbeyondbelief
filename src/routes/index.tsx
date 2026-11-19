@@ -5,6 +5,7 @@ import { Wash } from "@/components/Wash";
 import { Glyph } from "@/components/Glyph";
 import { WaveTransition } from "@/components/WaveTransition";
 import { HomeClosing } from "@/components/HomeClosing";
+import { GuidedMeditation } from "@/components/GuidedMeditation";
 import { PageOrnaments } from "@/components/PageOrnaments";
 import { SectionDivider } from "@/components/SectionDivider";
 import { CampaignModal, type CampaignModalConfig } from "@/components/CampaignModal";
@@ -125,7 +126,7 @@ function Home() {
       </section>
 
       {/* My Mission — starts after the wave; same cream fill as the SVG */}
-      <section className="relative px-6 pt-14 pb-20 md:pt-20 md:pb-28">
+      <section className="relative px-6 pt-14 pb-10 md:pt-20 md:pb-14">
         <div className="relative mx-auto max-w-3xl text-center">
           <h2 className="font-display text-4xl text-primary md:text-6xl">My Mission, My Path</h2>
           <SectionDivider />
@@ -147,6 +148,8 @@ function Home() {
           </div>
         </div>
       </section>
+
+      <GuidedMeditation />
 
       {/* Explore · Expand · Create */}
       <section className="relative px-6 py-16 md:py-24">
